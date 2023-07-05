@@ -1,0 +1,18 @@
+{
+  "name": "@xkesval/design",
+  "description": "The design system used for any projects by me (KesvaL)",
+  "version": "1.0.0",
+  "main": "scss/main.scss",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "KesvaL <jabeddou@gmail.com> (https://kesval.com/)",
+  "license": "MIT",
+  "files": [
+    "scss/**/*.scss"
+  ],
+  "devDependencies": {
+    "prettier": "^3.0.0",
+    "sass": "^1.63.6"
+  }
+}
