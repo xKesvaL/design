@@ -2,7 +2,9 @@
 @use "sass:math";
 @use "sass:map";
 @use "breakpoints" as *;
+@use "colors" as *;
 @use "tokens" as *;
+@use "typography" as *;
 
 @mixin mq($size) {
   @if map.has-key($breakpoints, $size) {
@@ -23,13 +25,25 @@
   }
 }
 
-@mixin heading($fs, $color: $heading-color-default) {
+@mixin heading($fs, $color: $color-neutral-900) {
   font-size: $fs;
   color: $color;
 
-  font-family: $heading-font-family;
-  text-transform: $heading-text-transform;
-  letter-spacing: $heading-letter-spacing;
-  font-weight: $heading-font-weight;
-  line-height: $heading-line-height;
+  font-family: $font-sans;
+  text-transform: uppercase;
+  letter-spacing: $letter-spacing-loose;
+  font-weight: $font-weight-bold;
+  line-height: 1.1;
+}
+
+@mixin motionSafe() {
+  @media (prefers-reduced-motion: no-preference) {
+    @content;
+  }
+}
+
+@mixin touch() {
+  @media ((hover: none) and (pointer: coarse)) {
+    @content;
+  }
 }

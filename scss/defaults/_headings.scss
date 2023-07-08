@@ -1,13 +1,13 @@
 @use "../abstracts" as *;
 
 h1 {
-  @include heading($heading-1-font-size, $heading-1-color);
+  @include heading($font-size-900, $color-neutral-900);
 }
 
 h2 {
-  @include heading($heading-2-font-size, $heading-2-color);
+  @include heading($font-size-800, $color-neutral-900);
 }
 
 h3 {
-  @include heading($heading-3-font-size, $heading-3-color);
+  @include heading($font-size-700, $color-neutral-900);
 }

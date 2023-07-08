@@ -1,5 +1,11 @@
 @use "../abstracts" as *;
 
+:where(html) {
+  scrollbar-color: $color-neutral-600;
+  accent-color: $color-primary-500;
+  caret-color: $color-primary-500;
+}
+
 body {
   font-family: $body-font-family;
   font-weight: $body-font-weight;
@@ -9,10 +15,18 @@ body {
   line-height: $body-line-height;
 }
 
-a {
-  color: $link-color;
+:where(a) {
+  color: $color-primary-500;
+
+  &:visited {
+    color: $color-secondary-500;
+  }
 }
 
-a:is(:hover, :focus) {
-  color: $link-color-hover;
+:where(a:hover, a:focus) {
+  color: $color-primary-600;
+}
+
+:focus-visible {
+  outline-color: $color-primary-500;
 }

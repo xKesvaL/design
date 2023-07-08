@@ -1,28 +1,37 @@
 @use "../abstracts" as *;
 
-button {
-  animation: button-pop 0.25s ease-out;
-  text-transform: uppercase;
-  font-weight: $font-weight-semi-bold;
+:where(button, input:is([type="button"], [type="submit"], [type="reset"])),
+:where(input[type="file"])::-webkit-file-upload-button,
+:where(input[type="file"])::file-selector-button {
+  animation: button-pop 0.2s ease-out;
+
   display: inline-flex;
   flex-shrink: 0;
-  cursor: pointer;
-  user-select: none;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: $font-weight-semi-bold;
+
+  cursor: pointer;
+  user-select: none;
+
   border-style: solid;
   border-width: 1px;
-  border-color: transparent;
-  text-align: center;
+  border-radius: $border-radius-3;
+
   transition: all 0.2s ease-in-out;
-  border-radius: $border-radius-1;
+
   padding: $size-2 $size-3;
 
-  /* Default Style */
   background-color: $color-base-200;
   border-color: $color-base-200;
   color: $color-neutral-900;
+
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
 }
 
 button:hover {

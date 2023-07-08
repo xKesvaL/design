@@ -3,13 +3,13 @@
 label {
   color: $body-text-color;
   font-family: $body-font-family;
-  font-weight: $font-weight-bold;
+  font-weight: $font-weight-semi-bold;
   font-size: $body-font-size;
 }
 
 input {
   font-size: $body-font-size;
-  font-weight: $font-weight-semi-bold;
+  font-weight: $font-weight-medium;
   color: $body-text-color;
   background-color: $color-base-200;
   padding: $size-2 $size-3;
@@ -26,7 +26,7 @@ input:focus {
 
 :where(::placeholder) {
   color: $color-neutral-500;
-  font-weight: $font-weight-semi-bold;
+  font-weight: $font-weight-medium;
 }
 
 :where(::-webkit-datetime-edit-fields-wrapper) {
@@ -108,6 +108,5 @@ input:focus {
 }
 
 :where([type="file"]:focus) {
-  outline: 1px dotted;
-  outline: 5px auto -webkit-focus-ring-color;
+  outline: 1px auto -webkit-focus-ring-color;
 }

@@ -14,6 +14,9 @@ $sizes: (
   13: 6rem,
   14: 8rem,
   15: 10rem,
+  16: 15rem,
+  17: 20rem,
+  18: 30rem,
 );
 
 $size-1: map-get($sizes, 1);
@@ -31,3 +34,17 @@ $size-12: map-get($sizes, 12);
 $size-13: map-get($sizes, 13);
 $size-14: map-get($sizes, 14);
 $size-15: map-get($sizes, 15);
+$size-16: map-get($sizes, 16);
+$size-17: map-get($sizes, 17);
+$size-18: map-get($sizes, 18);
+
+$size-fluid-1: clamp($size-2, 1vw, $size-4);
+$size-fluid-2: clamp($size-4, 2vw, $size-6);
+$size-fluid-3: clamp($size-6, 3vw, $size-8);
+$size-fluid-4: clamp($size-8, 4vw, $size-10);
+$size-fluid-5: clamp($size-11, 5vw, $size-12);
+$size-fluid-6: clamp($size-12, 7vw, $size-14);
+$size-fluid-7: clamp($size-14, 10vw, $size-15);
+$size-fluid-8: clamp($size-15, 20vw, $size-16);
+$size-fluid-9: clamp($size-16, 30vw, $size-17);
+$size-fluid-10: clamp($size-17, 40vw, $size-18);

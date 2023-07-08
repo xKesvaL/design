@@ -1,8 +1,24 @@
-$-ff-sans: system-ui, sans-serif;
-$-ff-serif: serif;
-
-$font-family-base: $-ff-sans;
-$font-family-accent: $-ff-sans;
+$font-sans:
+  system-ui,
+  -apple-system,
+  Segoe UI,
+  Roboto,
+  Ubuntu,
+  Cantarell,
+  Noto Sans,
+  sans-serif;
+$font-serif: ui-serif, serif;
+$font-mono:
+  Dank Mono,
+  Operator Mono,
+  Inconsolata,
+  Fira Mono,
+  ui-monospace,
+  SF Mono,
+  Monaco,
+  Droid Sans Mono,
+  Source Code Pro,
+  monospace;
 
 $font-sizes: (
   "xs": (
@@ -35,10 +51,7 @@ $font-size-700: var(--fs-700);
 $font-size-800: var(--fs-800);
 $font-size-900: var(--fs-900);
 
-$-fw-400: 400;
-$-fw-500: 500;
-$-fw-700: 700;
-
-$font-weight-default: $-fw-400;
-$font-weight-semi-bold: $-fw-500;
-$font-weight-bold: $-fw-700;
+$font-weight-default: 400;
+$font-weight-medium: 500;
+$font-weight-semi-bold: 600;
+$font-weight-bold: 700;
