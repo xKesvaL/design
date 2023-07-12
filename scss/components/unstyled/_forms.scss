@@ -1,7 +1,7 @@
-@use "../abstracts" as *;
+@use "../../abstracts/index" as *;
 
 label {
-  color: $body-text-color;
+  color: $color-neutral-800;
   font-family: $body-font-family;
   font-weight: $font-weight-semi-bold;
   font-size: $body-font-size;
@@ -10,7 +10,7 @@ label {
 input {
   font-size: $body-font-size;
   font-weight: $font-weight-medium;
-  color: $body-text-color;
+  color: $color-neutral-900;
   background-color: $color-base-200;
   padding: $size-2 $size-3;
   border: 1px solid $color-neutral-500;
@@ -19,7 +19,7 @@ input {
 }
 
 input:focus {
-  border: 1px solid $color-primary-500;
+  border: 1px solid $color-neutral-800;
   outline: 2px solid transparent;
   box-shadow: $box-shadow-1;
 }
@@ -58,7 +58,7 @@ input:focus {
   flex-shrink: 0;
   height: $size-4;
   width: $size-4;
-  color: $color-primary-600;
+  color: $color-neutral-800;
   border: 1px solid $color-neutral-500;
 }
 

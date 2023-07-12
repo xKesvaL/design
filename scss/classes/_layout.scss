@@ -1,0 +1,25 @@
+@use "../abstracts" as *;
+
+.even-columns {
+  display: grid;
+  gap: var(--grid-gap, $grid-gap);
+
+  @include mq("md") {
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+  }
+}
+
+.auto-fit {
+  display: grid;
+  gap: var(--grid-gap, $grid-gap);
+  grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: var(--flex-column-gap, $flex-group-gap);
+  row-gap: var(--flex-row-gap, calc($flex-group-gap / 2));
+  width: fit-content;
+}

@@ -1,4 +1,4 @@
-@use "../abstracts" as *;
+@use "../../abstracts/index" as *;
 
 h1 {
   @include heading($font-size-900, $color-neutral-900);

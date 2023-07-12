@@ -1,0 +1,86 @@
+@use "../../abstracts/index" as *;
+
+.btn {
+  &-primary {
+    background-color: $color-primary-400;
+    border-color: $color-primary-400;
+
+    &:hover {
+      background-color: $color-primary-500;
+      border-color: $color-primary-500;
+    }
+
+    &:focus-visible {
+      outline: 2px solid $color-primary-500;
+    }
+  }
+
+  &-secondary {
+    background-color: $color-secondary-300;
+    border-color: $color-secondary-300;
+
+    &:hover {
+      background-color: $color-secondary-400;
+      border-color: $color-secondary-400;
+    }
+
+    &:focus-visible {
+      outline: 2px solid $color-secondary-400;
+    }
+  }
+
+  &-accent {
+    background-color: $color-accent-300;
+    border-color: $color-accent-300;
+    color: $color-neutral-1000;
+
+    &:hover {
+      background-color: $color-accent-400;
+      border-color: $color-accent-400;
+    }
+
+    &:focus-visible {
+      outline: 2px solid $color-accent-400;
+    }
+  }
+
+  &-outline {
+    border-color: currentColor;
+    background: transparent;
+
+    &:hover {
+      background-color: $color-base-200;
+      border-color: $color-base-200;
+    }
+
+    &.btn-primary {
+      color: $color-primary-500;
+
+      &:hover {
+        background-color: $color-primary-400;
+        border-color: $color-primary-400;
+        color: $color-neutral-1000;
+      }
+    }
+
+    &.btn-secondary {
+      color: $color-secondary-400;
+
+      &:hover {
+        background-color: $color-secondary-300;
+        border-color: $color-secondary-300;
+        color: $color-neutral-1000;
+      }
+    }
+
+    &.btn-accent {
+      color: $color-accent-400;
+
+      &:hover {
+        background-color: $color-accent-300;
+        border-color: $color-accent-300;
+        color: $color-neutral-1000;
+      }
+    }
+  }
+}

@@ -1,0 +1,48 @@
+@use "../../abstracts" as *;
+
+.btn {
+  &-circle {
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    width: $size-10;
+    height: $size-10;
+
+    &-full {
+      width: auto;
+      height: auto;
+    }
+  }
+
+  &-square {
+    aspect-ratio: 1/1;
+    width: $size-10;
+    height: $size-10;
+
+    &-full {
+      width: auto;
+      height: auto;
+    }
+  }
+
+  &-full {
+    width: 100%;
+  }
+
+  &-sm {
+    min-height: $size-8;
+    padding: $size-1 $size-2;
+    font-size: $font-size-300;
+  }
+
+  &-md {
+    min-height: $size-10;
+    padding: $size-2 $size-3;
+    font-size: $font-size-400;
+  }
+
+  &-lg {
+    min-height: $size-10;
+    padding: $size-4 $size-6;
+    font-size: $font-size-600;
+  }
+}
