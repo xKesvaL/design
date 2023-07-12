@@ -3,11 +3,11 @@
 :root {
   @include light-theme;
 
-  [data-theme="dark"] {
+  &[data-theme="dark"] {
     @include dark-theme;
   }
 
-  [data-theme="auto"] {
+  &[data-theme="auto"] {
     @media (prefers-color-scheme: dark) {
       @include dark-theme;
     }
