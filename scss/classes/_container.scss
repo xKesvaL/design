@@ -4,7 +4,8 @@
   --padding: #{$container-min-margin-inline * 2};
   --max-width: #{$container-max-width};
 
-  width: min(100% - var(--padding), var(--max-width));
+  padding-inline: var(--padding);
+  max-width: var(--max-width);
   margin-inline: auto;
 }
 

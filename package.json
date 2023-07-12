@@ -1,7 +1,7 @@
 {
   "name": "@kesval/design",
   "description": "The design system used for any projects by me (KesvaL)",
-  "version": "1.4.3",
+  "version": "1.4.4",
   "main": "scss/main.scss",
   "author": "KesvaL <jabeddou@gmail.com> (https://kesval.com/)",
   "license": "MIT",
