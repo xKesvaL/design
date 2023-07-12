@@ -1,4 +1,4 @@
-$-clr-white: hsl(0 0% 100%);
+$clr-white: hsl(0 0% 100%);
 $-clr-gray-100: hsl(0 0% 95%);
 $-clr-gray-200: hsl(0 0% 82.5%);
 $-clr-gray-300: hsl(0 0% 70%);
@@ -8,7 +8,7 @@ $-clr-gray-600: hsl(0 0% 40%);
 $-clr-gray-700: hsl(0 0% 30%);
 $-clr-gray-800: hsl(0 0% 17.5%);
 $-clr-gray-900: hsl(0 0% 7.5%);
-$-clr-black: hsl(0 0% 0%);
+$clr-black: hsl(0 0% 0%);
 $-clr-orange-100: hsl(24 75% 95%);
 $-clr-orange-200: hsl(24 75% 82.5%);
 $-clr-orange-300: hsl(24 75% 70%);
@@ -147,7 +147,7 @@ $-clr-base-900: hsl(240, 24%, 8%);
 
 $light: (
   "neutral": (
-    "000": $-clr-white,
+    "000": $clr-white,
     "100": $-clr-gray-100,
     "200": $-clr-gray-200,
     "300": $-clr-gray-300,
@@ -157,7 +157,7 @@ $light: (
     "700": $-clr-gray-700,
     "800": $-clr-gray-800,
     "900": $-clr-gray-900,
-    "1000": $-clr-black,
+    "1000": $clr-black,
   ),
   "accent": (
     "100": $-clr-lime-100,
@@ -207,7 +207,7 @@ $light: (
 
 $dark: (
   "neutral": (
-    "1000": $-clr-white,
+    "1000": $clr-white,
     "900": $-clr-gray-100,
     "800": $-clr-gray-200,
     "700": $-clr-gray-300,
@@ -217,7 +217,7 @@ $dark: (
     "300": $-clr-gray-700,
     "200": $-clr-gray-800,
     "100": $-clr-gray-900,
-    "000": $-clr-black,
+    "000": $clr-black,
   ),
   "accent": (
     "900": $-clr-lime-100,

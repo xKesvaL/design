@@ -2,16 +2,17 @@
 
 .btn {
   &-primary {
-    background-color: $color-primary-400;
-    border-color: $color-primary-400;
+    background-color: $color-primary-500;
+    border-color: $color-primary-500;
+    color: $clr-white;
 
     &:hover {
-      background-color: $color-primary-500;
-      border-color: $color-primary-500;
+      background-color: $color-primary-600;
+      border-color: $color-primary-600;
     }
 
     &:focus-visible {
-      outline: 2px solid $color-primary-500;
+      outline: 2px solid $color-primary-600;
     }
   }
 
@@ -54,17 +55,17 @@
     }
 
     &.btn-primary {
-      color: $color-primary-500;
+      color: $color-primary-700;
 
       &:hover {
         background-color: $color-primary-400;
         border-color: $color-primary-400;
-        color: $color-neutral-1000;
+        color: $clr-white;
       }
     }
 
     &.btn-secondary {
-      color: $color-secondary-400;
+      color: $color-secondary-600;
 
       &:hover {
         background-color: $color-secondary-300;
@@ -74,7 +75,7 @@
     }
 
     &.btn-accent {
-      color: $color-accent-400;
+      color: $color-accent-800;
 
       &:hover {
         background-color: $color-accent-300;
