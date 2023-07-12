@@ -1,23 +1,15 @@
 @use "../abstracts" as *;
 
 :root {
-  color-scheme: light;
+  @include light-theme;
 
-  @each $color, $shade-map in $active-theme {
-    @each $shade, $value in $shade-map {
-      @include define-color("#{$color}-#{$shade}", $value);
-    }
+  [data-theme="dark"] {
+    @include dark-theme;
   }
 
-  @if ($enable-media-query-dark-mode) {
+  [data-theme="auto"] {
     @media (prefers-color-scheme: dark) {
-      color-scheme: dark;
-
-      @each $color, $shade-map in $dark {
-        @each $shade, $value in $shade-map {
-          @include define-color("#{$color}-#{$shade}", $value);
-        }
-      }
+      @include dark-theme;
     }
   }
 

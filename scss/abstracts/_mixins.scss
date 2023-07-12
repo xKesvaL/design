@@ -57,3 +57,23 @@
 
   --color-#{$title}-rgb: #{red($color)}, #{green($color)}, #{blue($color)};
 }
+
+@mixin light-theme {
+  color-scheme: light;
+
+  @each $color, $shade-map in $active-theme {
+    @each $shade, $value in $shade-map {
+      @include define-color("#{$color}-#{$shade}", $value);
+    }
+  }
+}
+
+@mixin dark-theme {
+  color-scheme: dark;
+
+  @each $color, $shade-map in $dark {
+    @each $shade, $value in $shade-map {
+      @include define-color("#{$color}-#{$shade}", $value);
+    }
+  }
+}
