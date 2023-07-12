@@ -5,7 +5,7 @@
 
   @each $color, $shade-map in $active-theme {
     @each $shade, $value in $shade-map {
-      --#{$color}-#{$shade}: #{$value};
+      @include define-color("#{$color}-#{$shade}", $value);
     }
   }
 
@@ -15,7 +15,7 @@
 
       @each $color, $shade-map in $dark {
         @each $shade, $value in $shade-map {
-          --#{$color}-#{$shade}: #{$value};
+          @include define-color("#{$color}-#{$shade}", $value);
         }
       }
     }

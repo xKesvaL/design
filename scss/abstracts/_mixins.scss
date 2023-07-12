@@ -46,3 +46,14 @@
     @content;
   }
 }
+
+@mixin define-color($title, $color) {
+  --color-#{$title}: #{$color};
+
+  --color-#{$title}-hue: #{hue($color)};
+  --color-#{$title}-lightness: #{lightness($color)};
+  --color-#{$title}-saturation: #{saturation($color)};
+  --color-#{$title}-alpha: #{alpha($color)};
+
+  --color-#{$title}-rgb: #{red($color)}, #{green($color)}, #{blue($color)};
+}
