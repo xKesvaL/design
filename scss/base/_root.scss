@@ -1,15 +1,15 @@
 @use "../abstracts" as *;
 
 :root {
-  @include light-theme;
+  @include dark-theme;
 
-  &[data-theme="dark"] {
-    @include dark-theme;
+  &[data-theme="light"] {
+    @include light-theme;
   }
 
   &[data-theme="auto"] {
-    @media (prefers-color-scheme: dark) {
-      @include dark-theme;
+    @media (prefers-color-scheme: light) {
+      @include light-theme;
     }
   }
 
