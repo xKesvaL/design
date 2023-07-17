@@ -5,7 +5,7 @@
 
 - [x] Button
 - [x] Forms
-- [ ] Typography (see tailwind typography and implement)
+- [x] Typography (see tailwind typography and implement)
 - [ ] ...
 
 ## Description
