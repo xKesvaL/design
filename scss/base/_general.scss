@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: "benz";
-  src: url("/fonts/benz.woff2") format("woff2");
+  src: url("../../fonts/benz.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -19,18 +19,6 @@ body {
   color: $body-text-color;
   background-color: $body-background-color;
   line-height: $body-line-height;
-}
-
-:where(a) {
-  color: $color-primary-500;
-
-  &:visited {
-    color: $color-secondary-500;
-  }
-}
-
-:where(a:hover, a:focus) {
-  color: $color-primary-600;
 }
 
 :focus-visible {

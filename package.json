@@ -1,18 +1,21 @@
 {
   "name": "@kesval/design",
   "description": "The design system used for any projects by me (KesvaL)",
-  "version": "1.7.0",
+  "version": "1.8.0",
   "main": "scss/main.scss",
   "author": "KesvaL <jabeddou@gmail.com> (https://kesval.com/)",
   "license": "MIT",
   "files": [
-    "scss/**/*.scss"
+    "scss/**/*.scss",
+    "fonts/**/*.woff2"
   ],
   "exports": {
     ".": "./scss/main.scss"
   },
   "devDependencies": {
-    "prettier": "^3.0.0",
+    "prettier": "^3.0.0"
+  },
+  "peerDependencies": {
     "sass": "^1.63.6"
   }
 }
