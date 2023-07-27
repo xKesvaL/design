@@ -1,0 +1,25 @@
+@use "../../abstracts" as *;
+
+:root {
+  @each $screen-size, $size-map in $font-sizes {
+    @if $screen-size == xs {
+      @each $size-name, $size-value in $size-map {
+        --fs-#{$size-name}: #{$size-value};
+      }
+    } @else {
+      @include mq($screen-size) {
+        @each $size-name, $size-value in $size-map {
+          --fs-#{$size-name}: #{$size-value};
+        }
+      }
+    }
+  }
+
+  @each $font-weight, $weight-value in $font-weights {
+    --fw-#{$font-weight}: #{$weight-value};
+  }
+
+  @each $font-name, $font-value in $fonts {
+    --ft-#{$font-name}: #{$font-value};
+  }
+}

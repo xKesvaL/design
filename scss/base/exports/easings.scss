@@ -1,0 +1,19 @@
+@use "../../abstracts" as *;
+
+:root {
+  @each $ease-name, $ease-value in $eases {
+    --ease-#{$ease-name}: #{$ease-value};
+  }
+
+  @each $ease-name, $ease-value in $eases-in {
+    --ease-in-#{$ease-name}: #{$ease-value};
+  }
+
+  @each $ease-name, $ease-value in $eases-out {
+    --ease-out-#{$ease-name}: #{$ease-value};
+  }
+
+  @each $ease-name, $ease-value in $eases-elastic {
+    --ease-elastic-#{$ease-name}: #{$ease-value};
+  }
+}

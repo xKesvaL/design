@@ -1,7 +1,7 @@
 {
   "name": "@kesval/design",
   "description": "The design system used for any projects by me (KesvaL)",
-  "version": "1.8.1",
+  "version": "2.0.0",
   "main": "scss/main.scss",
   "author": "KesvaL <jabeddou@gmail.com> (https://kesval.com/)",
   "license": "MIT",
@@ -9,8 +9,16 @@
     "scss/**/*.scss",
     "fonts/**/*.woff2"
   ],
+  "homepage": "https://github.com/xKesvaL/design",
   "exports": {
-    ".": "./scss/main.scss"
+    ".": "./scss/main.scss",
+    "./default": "./scss/base/exports/index.scss",
+    "./font": "./fonts/benz.woff2",
+    "./aspects": "./scss/base/exports/aspects.scss",
+    "./borders": "./scss/base/exports/borders.scss",
+    "./easings": "./scss/base/exports/easings.scss",
+    "./fonts": "./scss/base/exports/fonts.scss",
+    "./shadows": "./scss/base/exports/shadows.scss"
   },
   "devDependencies": {
     "prettier": "^3.0.0"
