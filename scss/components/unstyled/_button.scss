@@ -2,7 +2,7 @@
 @use "sass:map";
 
 .btn {
-  animation: button-pop 0.2s ease-out;
+  animation: button-pop 0.3s ease-out;
 
   display: inline-flex;
   flex-shrink: 0;
@@ -21,7 +21,7 @@
   border-width: 1px;
   border-radius: map.get($border-radii, 3);
 
-  transition: all 0.2s ease-in-out;
+  transition: all 0.3s ease-in-out;
 
   min-height: map.get($sizes, 10);
   padding: map.get($sizes, 2) map.get($sizes, 3);

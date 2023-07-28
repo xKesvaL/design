@@ -1,0 +1,49 @@
+.file-input {
+  flex-shrink: 1;
+  height: 3rem;
+  padding: 0 1rem 0 0;
+  line-height: 2;
+  border-radius: 0.5rem;
+  overflow: hidden;
+
+  &::file-selector-button,
+  &::-webkit-file-upload-button {
+    display: inline-flex;
+    flex-shrink: 0;
+    cursor: pointer;
+    user-select: none;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: 0.3s ease-out;
+    height: 2.875rem;
+    padding: 0 1rem;
+    margin-right: 1rem;
+    line-height: 1em;
+    font-weight: 600;
+    text-transform: uppercase;
+    animation: button-pop 0.3s ease-out;
+    border-radius: 0;
+  }
+
+  &:disabled,
+  &[disabled],
+  &-disabled {
+    cursor: not-allowed;
+  }
+}
+
+@keyframes button-pop {
+  0% {
+    transform: scale(0.98);
+  }
+
+  40% {
+    transform: scale(1.02);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
