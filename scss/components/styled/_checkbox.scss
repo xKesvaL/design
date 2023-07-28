@@ -1,0 +1,71 @@
+.checkbox {
+  --ckb-bg-rgb: var(--color-neutral-900-rgb);
+  --ckb-fg-rgb: var(--color-neutral-100-rgb);
+  border: 1px solid rgba(var(--ckb-bg-rgb), 0.4);
+
+  &:focus {
+    border: 1px solid rgba(var(--ckb-bg-rgb), 0.4);
+  }
+
+  &:focus-visible {
+    outline: 2px solid rgb(var(--ckb-bg-rgb));
+    outline-offset: 2px;
+  }
+
+  &:checked,
+  &[checked="true"],
+  &[aria-checked="true"] {
+    background: rgb(var(--ckb-bg-rgb)) no-repeat;
+    background-image: linear-gradient(
+        -45deg,
+        transparent 65%,
+        rgba(var(--ckb-bg-rgb)) 65.99%
+      ),
+      linear-gradient(45deg, transparent 75%, rgba(var(--ckb-bg-rgb)) 75.99%),
+      linear-gradient(-45deg, rgba(var(--ckb-bg-rgb)) 40%, transparent 40.99%),
+      linear-gradient(
+        45deg,
+        rgba(var(--ckb-bg-rgb)) 30%,
+        rgba(var(--ckb-fg-rgb)) 30.99%,
+        rgba(var(--ckb-fg-rgb)) 40%,
+        transparent 40.99%
+      ),
+      linear-gradient(
+        -45deg,
+        rgba(var(--ckb-fg-rgb)) 50%,
+        rgba(var(--ckb-bg-rgb)) 50.99%
+      );
+  }
+
+  &:indeterminate {
+    background: rgb(var(--ckb-bg-rgb)) no-repeat;
+    background-image: linear-gradient(
+        90deg,
+        transparent 80%,
+        rgba(var(--ckb-bg-rgb)) 80%
+      ),
+      linear-gradient(-90deg, transparent 80%, rgba(var(--ckb-bg-rgb)) 80%),
+      linear-gradient(
+        0deg,
+        rgba(var(--ckb-bg-rgb)) 43%,
+        rgba(var(--ckb-fg-rgb)) 43%,
+        rgba(var(--ckb-fg-rgb)) 57%,
+        rgba(var(--ckb-bg-rgb)) 57%
+      );
+  }
+
+  &-primary {
+    --ckb-bg-rgb: var(--color-primary-600-rgb);
+    --ckb-fg-rgb: 255, 255, 255;
+  }
+
+  &-secondary {
+    --ckb-bg-rgb: var(--color-secondary-500-rgb);
+    --ckb-fg-rgb: var(--color-neutral-900-rgb);
+  }
+
+  &-accent {
+    --ckb-bg-rgb: var(--color-accent-400-rgb);
+    --ckb-fg-rgb: var(--color-neutral-900-rgb);
+  }
+}
