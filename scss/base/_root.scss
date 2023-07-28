@@ -12,4 +12,18 @@
       @include light-theme;
     }
   }
+
+  @each $screen-size, $size-map in $font-sizes {
+    @if $screen-size == xs {
+      @each $size-name, $size-value in $size-map {
+        --fs-#{$size-name}: #{$size-value};
+      }
+    } @else {
+      @include mq($screen-size) {
+        @each $size-name, $size-value in $size-map {
+          --fs-#{$size-name}: #{$size-value};
+        }
+      }
+    }
+  }
 }
