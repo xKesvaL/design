@@ -2,46 +2,46 @@
 
 .btn {
   &-primary {
-    background-color: $color-primary-500;
-    border-color: $color-primary-500;
-    color: $clr-white;
+    background-color: var(--color-primary-500);
+    border-color: var(--color-primary-500);
+    color: white;
 
     &:hover {
-      background-color: $color-primary-600;
-      border-color: $color-primary-600;
+      background-color: var(--color-primary-600);
+      border-color: var(--color-primary-600);
     }
 
     &:focus-visible {
-      outline: 2px solid $color-primary-600;
+      outline: 2px solid var(--color-primary-600);
     }
   }
 
   &-secondary {
-    background-color: $color-secondary-300;
-    border-color: $color-secondary-300;
+    background-color: var(--color-secondary-300);
+    border-color: var(--color-secondary-300);
 
     &:hover {
-      background-color: $color-secondary-400;
-      border-color: $color-secondary-400;
+      background-color: var(--color-secondary-400);
+      border-color: var(--color-secondary-400);
     }
 
     &:focus-visible {
-      outline: 2px solid $color-secondary-400;
+      outline: 2px solid var(--color-secondary-400);
     }
   }
 
   &-accent {
-    background-color: $color-accent-300;
-    border-color: $color-accent-300;
-    color: $color-neutral-1000;
+    background-color: var(--color-accent-300);
+    border-color: var(--color-accent-300);
+    color: var(--color-neutral-1000);
 
     &:hover {
-      background-color: $color-accent-400;
-      border-color: $color-accent-400;
+      background-color: var(--color-accent-400);
+      border-color: var(--color-accent-400);
     }
 
     &:focus-visible {
-      outline: 2px solid $color-accent-400;
+      outline: 2px solid var(--color-accent-400);
     }
   }
 
@@ -50,37 +50,37 @@
     background: transparent;
 
     &:hover {
-      background-color: $color-base-200;
-      border-color: $color-base-200;
+      background-color: var(--color-base-200);
+      border-color: var(--color-base-200);
     }
 
     &.btn-primary {
-      color: $color-primary-700;
+      color: var(--color-primary-700);
 
       &:hover {
-        background-color: $color-primary-400;
-        border-color: $color-primary-400;
-        color: $clr-white;
+        background-color: var(--color-primary-400);
+        border-color: var(--color-primary-400);
+        color: white;
       }
     }
 
     &.btn-secondary {
-      color: $color-secondary-600;
+      color: var(--color-secondary-600);
 
       &:hover {
-        background-color: $color-secondary-300;
-        border-color: $color-secondary-300;
-        color: $color-neutral-1000;
+        background-color: var(--color-secondary-300);
+        border-color: var(--color-secondary-300);
+        color: var(--color-neutral-1000);
       }
     }
 
     &.btn-accent {
-      color: $color-accent-800;
+      color: var(--color-accent-800);
 
       &:hover {
-        background-color: $color-accent-300;
-        border-color: $color-accent-300;
-        color: $color-neutral-1000;
+        background-color: var(--color-accent-300);
+        border-color: var(--color-accent-300);
+        color: var(--color-neutral-1000);
       }
     }
   }

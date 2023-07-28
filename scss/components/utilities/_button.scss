@@ -1,11 +1,12 @@
 @use "../../abstracts" as *;
+@use "sass:map";
 
 .btn {
   &-circle {
     border-radius: 50%;
     aspect-ratio: 1/1;
-    width: $size-10;
-    height: $size-10;
+    width: map.get($sizes, 10);
+    height: map.get($sizes, 10);
 
     &-full {
       width: auto;
@@ -15,8 +16,8 @@
 
   &-square {
     aspect-ratio: 1/1;
-    width: $size-10;
-    height: $size-10;
+    width: map.get($sizes, 10);
+    height: map.get($sizes, 10);
 
     &-full {
       width: auto;
@@ -29,20 +30,20 @@
   }
 
   &-sm {
-    min-height: $size-8;
-    padding: $size-1 $size-2;
-    font-size: $font-size-300;
+    min-height: map.get($sizes, 8);
+    padding: map.get($sizes, 1) map.get($sizes, 2);
+    font-size: var(--fs-300);
   }
 
   &-md {
-    min-height: $size-10;
-    padding: $size-2 $size-3;
-    font-size: $font-size-400;
+    min-height: map.get($sizes, 10);
+    padding: map.get($sizes, 2) map.get($sizes, 3);
+    font-size: var(--fs-400);
   }
 
   &-lg {
-    min-height: $size-10;
-    padding: $size-4 $size-6;
-    font-size: $font-size-600;
+    min-height: map.get($sizes, 10);
+    padding: map.get($sizes, 4) map.get($sizes, 6);
+    font-size: var(--fs-600);
   }
 }

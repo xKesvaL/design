@@ -7,9 +7,9 @@
 }
 
 :where(html) {
-  scrollbar-color: $color-neutral-600;
-  accent-color: $color-primary-500;
-  caret-color: $color-primary-500;
+  scrollbar-color: var(--color-neutral-600);
+  accent-color: var(--color-primary-500);
+  caret-color: var(--color-primary-500);
 }
 
 body {
@@ -22,5 +22,5 @@ body {
 }
 
 :focus-visible {
-  outline-color: $color-primary-500;
+  outline-color: var(--color-primary-500);
 }

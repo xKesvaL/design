@@ -1,3 +1,5 @@
+@use "sass:map";
+
 $sizes: (
   1: 0.25rem,
   2: 0.5rem,
@@ -20,14 +22,14 @@ $sizes: (
 );
 
 $sizes-fluid: (
-  "1": clamp($size-2, 1vw, $size-4),
-  "2": clamp($size-4, 2vw, $size-6),
-  "3": clamp($size-6, 3vw, $size-8),
-  "4": clamp($size-8, 4vw, $size-10),
-  "5": clamp($size-11, 5vw, $size-12),
-  "6": clamp($size-12, 7vw, $size-14),
-  "7": clamp($size-14, 10vw, $size-15),
-  "8": clamp($size-15, 20vw, $size-16),
-  "9": clamp($size-16, 30vw, $size-17),
-  "10": clamp($size-17, 40vw, $size-18),
+  "1": clamp(map.get($sizes, 2), 1vw, map.get($sizes, 4)),
+  "2": clamp(map.get($sizes, 4), 2vw, map.get($sizes, 6)),
+  "3": clamp(map.get($sizes, 6), 3vw, map.get($sizes, 8)),
+  "4": clamp(map.get($sizes, 8), 4vw, map.get($sizes, 10)),
+  "5": clamp(map.get($sizes, 11), 5vw, map.get($sizes, 12)),
+  "6": clamp(map.get($sizes, 12), 7vw, map.get($sizes, 14)),
+  "7": clamp(map.get($sizes, 14), 10vw, map.get($sizes, 15)),
+  "8": clamp(map.get($sizes, 15), 20vw, map.get($sizes, 16)),
+  "9": clamp(map.get($sizes, 16), 30vw, map.get($sizes, 17)),
+  "10": clamp(map.get($sizes, 17), 40vw, map.get($sizes, 18)),
 );

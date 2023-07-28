@@ -8,7 +8,7 @@
 
 @mixin mq($size) {
   @if map.has-key($breakpoints, $size) {
-    $breakpoint: map-get($breakpoints, $size);
+    $breakpoint: map.get($breakpoints, $size);
     @media screen and (min-width: $breakpoint) {
       @content;
     }
@@ -29,9 +29,9 @@
   font-size: $fs;
   color: $color;
 
-  font-family: $font-title;
+  font-family: map-get($fonts, "title");
   letter-spacing: $letter-spacing-loose;
-  font-weight: $font-weight-bold;
+  font-weight: map-get($font-weights, "bold");
   line-height: 1.1;
 }
 

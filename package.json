@@ -18,12 +18,16 @@
     "./borders": "./scss/base/exports/borders.scss",
     "./easings": "./scss/base/exports/easings.scss",
     "./fonts": "./scss/base/exports/fonts.scss",
-    "./shadows": "./scss/base/exports/shadows.scss"
+    "./shadows": "./scss/base/exports/shadows.scss",
+    "./sizes": "./scss/base/exports/sizes.scss"
   },
   "devDependencies": {
     "prettier": "^3.0.0"
   },
   "peerDependencies": {
     "sass": "^1.63.6"
+  },
+  "scripts": {
+    "build": "sass scss:css"
   }
 }
