@@ -1,0 +1,20 @@
+.divider {
+  --dv-bg: rgba(var(--color-neutral-900-rgb), 0.2);
+
+  &::before,
+  &::after {
+    background: var(--dv-bg);
+  }
+
+  &-primary {
+    --dv-bg: rgba(var(--color-primary-rgb), 0.2);
+  }
+
+  &-secondary {
+    --dv-bg: rgba(var(--color-secondary-rgb), 0.2);
+  }
+
+  &-accent {
+    --dv-bg: rgba(var(--color-accent-rgb), 0.2);
+  }
+}
