@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/main.css" />
+  </head>
+  <body class="container section container-wide">
+    <br />
+    <h1>Hi</h1>
+    <h2>Hi 2</h2>
+    <h3>Hi 3</h3>
+    <br />
+    <form>
+      <label>
+        Name
+        <input type="text" name="name" placeholder="name" />
+      </label>
+      <label>
+        Email
+        <input type="email" name="email" placeholder="email" />
+      </label>
+      <input type="submit" value="Submit" class="btn-primary" />
+    </form>
+    <br />
+    <div class="flex">
+      <button class="btn">Hi I'm A Button</button>
+      <button class="btn btn-primary">Primary Button</button>
+      <button class="btn btn-secondary">Secondary Button</button>
+      <button class="btn btn-accent">Accent Button</button>
+      <button class="btn btn-square">S?</button>
+      <button class="btn btn-circle">C?</button>
+      <button class="btn" disabled>Disabled Button :(</button>
+    </div>
+    <br />
+    <div class="flex">
+      <button class="btn btn-outline">Hi I'm A Button</button>
+      <button class="btn btn-primary btn-outline">Primary Button</button>
+      <button class="btn btn-secondary btn-outline">Secondary Button</button>
+      <button class="btn btn-accent btn-outline">Accent Button</button>
+      <button class="btn btn-square btn-outline">S?</button>
+      <button class="btn btn-circle btn-outline">C?</button>
+      <button disabled class="btn btn-outline">Disabled Button :(</button>
+    </div>
+    <br />
+    <div class="flex" style="align-items: center">
+      <button class="btn btn-lg">Large</button>
+      <button class="btn">Default</button>
+      <button class="btn btn-sm">Small</button>
+    </div>
+    <br />
+    <div class="breadcrumbs">
+      <ul>
+        <li>hi</li>
+        <li>
+          <a href="#">home</a>
+        </li>
+        <li>hi</li>
+        <li>hi</li>
+      </ul>
+    </div>
+    <br />
+    <div>
+      <input type="checkbox" class="checkbox" />
+      <input type="checkbox" class="checkbox checkbox-primary checkbox-xs" />
+      <input type="checkbox" class="checkbox checkbox-secondary checkbox-sm" />
+      <input type="checkbox" class="checkbox checkbox-accent" />
+      <input
+        type="checkbox"
+        class="checkbox checkbox-accent checkbox-lg"
+        disabled
+      />
+    </div>
+    <br />
+    <div style="font-size: 32px">
+      <span class="countdown">
+        <span id="ctd" style="--value: 99"> </span>
+      </span>
+    </div>
+    <div style="font-size: 16px">
+      <span class="countdown">
+        <span id="ctd2" style="--value: 99"> </span>
+      </span>
+    </div>
+    <script>
+      const ctd = document.getElementById("ctd");
+      const ctd2 = document.getElementById("ctd2");
+      let val = 99;
+      setInterval(() => {
+        ctd.style.setProperty("--value", val);
+        ctd2.style.setProperty("--value", val);
+        val--;
+      }, 1000);
+    </script>
+    <div class="flex" style="width: 100%">
+      <div style="flex: 1">
+        <div>test</div>
+        <div class="divider">test</div>
+        <div>test</div>
+      </div>
+      <div style="flex: 1">
+        <div class="flex" style="height: 10rem; margin-inline: auto">
+          <div>test</div>
+          <div class="divider divider-horizontal">test</div>
+          <div>test</div>
+        </div>
+      </div>
+    </div>
+
+    <br />
+    <div class="flex">
+      <input type="file" class="file-input" />
+      <input type="file" class="file-input file-input-primary file-input-xs" />
+      <input
+        type="file"
+        class="file-input file-input-secondary file-input-sm"
+      />
+      <input type="file" class="file-input file-input-accent" />
+      <input
+        type="file"
+        class="file-input file-input-accent file-input-lg"
+        disabled
+      />
+    </div>
+    <div>
+      <div class="div loading loading-spinner"></div>
+      <div class="div loading loading-dots loading-xs"></div>
+      <div class="div loading loading-dots loading-sm"></div>
+      <div class="div loading loading-spinner"></div>
+      <div class="div loading loading-spinner loading-lg"></div>
+    </div>
+    <div>
+      <progress class="progress w-56" value="0" max="100"></progress>
+      <progress class="progress w-56" value="10" max="100"></progress>
+      <progress class="progress w-56" value="40" max="100"></progress>
+      <progress class="progress w-56" value="70" max="100"></progress>
+      <progress class="progress w-56" value="100" max="100"></progress>
+      <progress class="progress w-56"></progress>
+    </div>
+  </body>
+</html>
