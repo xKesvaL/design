@@ -1,0 +1,42 @@
+input[type="radio"] {
+  height: 1.5rem;
+  width: 1.5rem;
+  cursor: pointer;
+  appearance: none;
+  border-radius: 9999px;
+  border: 1px solid currentColor;
+  flex-shrink: 0;
+  padding: 0;
+
+  &:focus-visible {
+    outline: 2px solid currentColor;
+  }
+
+  &:checked,
+  &[checked="true"],
+  &[aria-checked="true"] {
+    background: currentColor;
+    animation: radiomark 0.3s ease-out;
+    box-shadow:
+      0 0 0 4px var(--color-base-100) inset,
+      0 0 0 4px var(--color-base-100) inset;
+  }
+}
+
+@keyframes radiomark {
+  0% {
+    box-shadow:
+      0 0 0 12px var(--color-base-100) inset,
+      0 0 0 12px var(--color-base-100) inset;
+  }
+  50% {
+    box-shadow:
+      0 0 0 3px var(--color-base-100) inset,
+      0 0 0 3px var(--color-base-100) inset;
+  }
+  100% {
+    box-shadow:
+      0 0 0 4px var(--color-base-100) inset,
+      0 0 0 4px var(--color-base-100) inset;
+  }
+}
