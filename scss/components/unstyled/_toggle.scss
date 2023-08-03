@@ -1,0 +1,60 @@
+.toggle {
+  flex-shrink: 0;
+  --handleOffset: 1.5rem;
+  --handleOffsetCalculator: calc(var(--handleOffset) * -1);
+  --toggleHandleBorder: 0 0;
+  height: 1.5rem;
+  width: 3rem;
+  cursor: pointer;
+  appearance: none;
+  border: 1px solid var(--color-neutral-900);
+  background: var(--color-neutral-900);
+  border-radius: 999px;
+  transition: 0.3s ease-out;
+  box-shadow:
+    var(--handleOffsetCalculator) 0 0 2px var(--color-base-200) inset,
+    0 0 0 2px var(--color-base-200) inset,
+    var(--toggleHandleBorder);
+  opacity: 0.55;
+
+  [dir="rtl"] & {
+    --handleOffsetCalculator: calc(var(--handleOffset) * 1);
+  }
+
+  &:focus {
+    box-shadow:
+      var(--handleOffsetCalculator) 0 0 2px var(--color-base-200) inset,
+      0 0 0 2px var(--color-base-200) inset,
+      var(--toggleHandleBorder);
+  }
+
+  &:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+  }
+
+  &:checked,
+  &[checked="true"],
+  &[aria-checked="true"] {
+    --handleOffsetCalculator: var(--handleOffset);
+    opacity: 1;
+    background: currentColor;
+    border-color: currentColor;
+  }
+
+  &:indeterminate {
+    opacity: 1;
+    box-shadow:
+      calc(var(--handleOffset) / 2) 0 0 2px var(--color-base-200) inset,
+      calc(var(--handleOffset) / -2) 0 0 2px var(--color-base-200) inset,
+      0 0 0 2px var(--color-base-200) inset;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    background: transparent;
+    opacity: 0.3;
+    --toggleHandleBorder: 0 0 0 3px var(--color-neutral-900) inset,
+      var(--handleOffsetCalculator) 0 0 3px var(--color-neutral-900) inset;
+  }
+}
