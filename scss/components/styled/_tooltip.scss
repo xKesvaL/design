@@ -1,0 +1,14 @@
+.tooltip {
+  &-primary {
+    --tooltipColor: var(--color-primary-500);
+    --tooltipTextColor: white;
+  }
+  &-secondary {
+    --tooltipColor: var(--color-secondary-400);
+    --tooltipTextColor: var(--color-neutral-100);
+  }
+  &-accent {
+    --tooltipColor: var(--color-accent-300);
+    --tooltipTextColor: var(--color-neutral-100);
+  }
+}

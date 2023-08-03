@@ -1298,9 +1298,49 @@ progress {
 .toggle:disabled {
   cursor: not-allowed;
   background: transparent;
-  opacity: 0.4;
+  opacity: 0.3;
   --toggleHandleBorder: 0 0 0 3px var(--color-neutral-900) inset,
     var(--handleOffsetCalculator) 0 0 3px var(--color-neutral-900) inset;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  --tooltipOffset: calc(100% + 1px + var(--tooltipTail, 0px));
+}
+.tooltip::before {
+  content: attr(data-tip);
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+}
+.tooltip::before, .tooltip-top::before {
+  top: auto;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: var(--tooltipOffset);
+  right: auto;
+}
+.tooltip-bottom::before {
+  top: var(--tooltipOffset);
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: auto;
+  right: auto;
+}
+.tooltip-left::before {
+  top: 50%;
+  left: auto;
+  transform: translateY(-50%);
+  bottom: auto;
+  right: var(--tooltipOffset);
+}
+.tooltip-right::before {
+  top: 50%;
+  left: var(--tooltipOffset);
+  transform: translateY(-50%);
+  bottom: auto;
+  right: auto;
 }
 
 .btn-primary {
@@ -1478,6 +1518,19 @@ progress {
   color: var(--color-neutral-900-rgb);
 }
 
+.tooltip-primary {
+  --tooltipColor: var(--color-primary-500);
+  --tooltipTextColor: white;
+}
+.tooltip-secondary {
+  --tooltipColor: var(--color-secondary-400);
+  --tooltipTextColor: var(--color-neutral-100);
+}
+.tooltip-accent {
+  --tooltipColor: var(--color-accent-300);
+  --tooltipTextColor: var(--color-neutral-100);
+}
+
 .btn-circle {
   border-radius: 50%;
   aspect-ratio: 1/1;
@@ -1637,6 +1690,76 @@ progress {
 :where(.toast-bottom) {
   top: auto;
   bottom: 0;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  --tooltipTail: 0.1875rem;
+  --tooltipColor: var(--color-base-300);
+  --tooltipTextColor: var(--color-neutral-900);
+  --tooltipTailOffset: calc(100% + 0.0625rem - var(--tooltipTail));
+}
+.tooltip::before, .tooltip::after {
+  opacity: 0;
+  transition: 0.3s 0.1s ease-in-out;
+  position: absolute;
+}
+.tooltip::before {
+  max-width: 20rem;
+  border-radius: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  background: var(--tooltipColor);
+  color: var(--tooltipTextColor);
+  width: max-content;
+}
+.tooltip-open::before, .tooltip-open::after, .tooltip:hover::before, .tooltip:hover::after, .tooltip:focus-visible::before, .tooltip:focus-visible::after, .tooltip:has(:focus-visible)::before, .tooltip:has(:focus-visible)::after {
+  opacity: 1;
+}
+.tooltip:not([data-tip]):hover::before, .tooltip:not([data-tip]):hover::after {
+  visibility: hidden;
+  opacity: 0;
+}
+.tooltip::after {
+  content: "";
+  border-style: solid;
+  border-width: var(--tooltipTail, 0);
+  width: 0;
+  height: 0;
+  display: block;
+}
+.tooltip::after, .tooltip-top::after {
+  transform: translateX(-50%);
+  border-color: var(--tooltipColor) transparent transparent transparent;
+  top: auto;
+  left: 50%;
+  right: auto;
+  bottom: var(--tooltipTailOffset);
+}
+.tooltip-bottom::after {
+  transform: translateX(-50%);
+  border-color: transparent transparent var(--tooltipColor) transparent;
+  top: var(--tooltipTailOffset);
+  left: 50%;
+  right: auto;
+  bottom: auto;
+}
+.tooltip-left::after {
+  transform: translateY(-50%);
+  border-color: transparent transparent transparent var(--tooltipColor);
+  top: 50%;
+  left: auto;
+  right: var(--tooltipTailOffset);
+  bottom: auto;
+}
+.tooltip-right::after {
+  transform: translateY(-50%);
+  border-color: transparent var(--tooltipColor) transparent transparent;
+  top: 50%;
+  left: var(--tooltipTailOffset);
+  right: auto;
+  bottom: auto;
 }
 
 /*# sourceMappingURL=main.css.map */
