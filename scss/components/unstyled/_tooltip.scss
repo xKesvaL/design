@@ -1,0 +1,53 @@
+.tooltip {
+  position: relative;
+  display: inline-block;
+  --tooltipOffset: calc(100% + 1px + var(--tooltipTail, 0px));
+
+  &::before {
+    content: attr(data-tip);
+    position: absolute;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  &,
+  &-top {
+    &::before {
+      top: auto;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: var(--tooltipOffset);
+      right: auto;
+    }
+  }
+
+  &-bottom {
+    &::before {
+      top: var(--tooltipOffset);
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: auto;
+      right: auto;
+    }
+  }
+
+  &-left {
+    &::before {
+      top: 50%;
+      left: auto;
+      transform: translateY(-50%);
+      bottom: auto;
+      right: var(--tooltipOffset);
+    }
+  }
+
+  &-right {
+    &::before {
+      top: 50%;
+      left: var(--tooltipOffset);
+      transform: translateY(-50%);
+      bottom: auto;
+      right: auto;
+    }
+  }
+}

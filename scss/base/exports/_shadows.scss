@@ -1,0 +1,11 @@
+@use "../../abstracts" as *;
+
+:root {
+  @each $box-shadow-name, $box-shadow-value in $box-shadows {
+    --box-shadow-#{$box-shadow-name}: #{$box-shadow-value};
+  }
+
+  @each $box-shadow-inner-name, $box-shadow-inner-value in $box-shadows-inner {
+    --box-shadow-inner-#{$box-shadow-inner-name}: #{$box-shadow-inner-value};
+  }
+}

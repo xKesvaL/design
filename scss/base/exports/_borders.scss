@@ -1,0 +1,15 @@
+@use "../../abstracts" as *;
+
+:root {
+  @each $border-name, $border-value in $borders {
+    --border-#{$border-name}: #{$border-value};
+  }
+
+  @each $border-radius-name, $border-radius-value in $border-radii {
+    --border-radius-#{$border-radius-name}: #{$border-radius-value};
+  }
+
+  @each $blob-name, $blob-value in $blobs {
+    --border-blob-#{$blob-name}: #{$blob-value};
+  }
+}

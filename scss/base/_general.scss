@@ -1,15 +1,20 @@
 @use "../abstracts" as *;
 
 @font-face {
-  font-family: "benz";
-  src: url("/fonts/benz.woff2") format("woff2");
+  font-family: "Benzin";
+  src:
+    local("Benzin Bold"),
+    local("Benzin"),
+    url("/fonts/benz.woff2") format("woff2");
   font-display: swap;
+  font-style: normal;
+  font-weight: 700;
 }
 
 :where(html) {
-  scrollbar-color: $color-neutral-600;
-  accent-color: $color-primary-500;
-  caret-color: $color-primary-500;
+  scrollbar-color: var(--color-neutral-600);
+  accent-color: var(--color-primary-500);
+  caret-color: var(--color-primary-500);
 }
 
 body {
@@ -22,5 +27,44 @@ body {
 }
 
 :focus-visible {
-  outline-color: $color-primary-500;
+  outline-color: var(--color-primary-500);
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+::selection {
+  background-color: var(--color-primary-500);
+  color: white;
+}
+
+::-webkit-scrollbar {
+  width: 1vw;
+
+  @include mq(lg) {
+    width: 0.5vw;
+  }
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-base-200);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary-500);
+}
+
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: bold;
 }

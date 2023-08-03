@@ -11,6 +11,7 @@
   font: inherit;
   line-height: calc(0.25rem + 1em + 0.25rem);
   text-rendering: optimizeLegibility;
+  vertical-align: baseline;
 }
 
 html {
@@ -67,6 +68,13 @@ a:not([class]) {
 a {
   color: inherit;
   text-decoration: inherit;
+}
+
+// table
+
+:where(table) {
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 // Interactivity

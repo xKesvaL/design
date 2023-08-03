@@ -1,26 +1,27 @@
 @use "colors" as *;
 @use "sizes" as *;
 @use "typography" as *;
+@use "sass:map";
 
 $active-theme: $light;
 
-$color-text-default: $color-neutral-800;
-$color-background-default: $color-base-100;
+$color-text-default: var(--color-neutral-800);
+$color-background-default: var(--color-base-100);
 
 // 0 = disabled
 $letter-spacing-loose: 0;
 
-$body-font-family: $font-sans;
-$body-font-size: $font-size-400;
+$body-font-family: map.get($fonts, "sans");
+$body-font-size: var(--fs-400);
 $body-line-height: 1.5;
-$body-font-weight: $font-weight-default;
+$body-font-weight: map.get($font-weights, "default");
 $body-text-color: $color-text-default;
 $body-background-color: $color-background-default;
 
 $hero-padding-block: clamp(15rem, 15vh, 20rem);
 $section-padding-block: clamp(5rem, 10vh, 6rem);
 
-$container-min-margin-inline: $size-4;
+$container-min-margin-inline: map.get($sizes, 4);
 $container-max-width: 64rem;
 $container-max-width-narrow: 40rem;
 $container-max-width-wide: 75rem;
