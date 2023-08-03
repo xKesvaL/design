@@ -29,3 +29,42 @@ body {
 :focus-visible {
   outline-color: var(--color-primary-500);
 }
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+::selection {
+  background-color: var(--color-primary-500);
+  color: white;
+}
+
+::-webkit-scrollbar {
+  width: 1vw;
+
+  @include mq(lg) {
+    width: 0.5vw;
+  }
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-base-200);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary-500);
+}
+
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: bold;
+}
