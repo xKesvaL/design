@@ -26,4 +26,60 @@
       }
     }
   }
+
+  @each $aspect-name, $aspect-value in $aspects {
+    --aspect-#{$aspect-name}: #{$aspect-value};
+  }
+
+  @each $border-name, $border-value in $borders {
+    --border-#{$border-name}: #{$border-value};
+  }
+
+  @each $border-radius-name, $border-radius-value in $border-radii {
+    --border-radius-#{$border-radius-name}: #{$border-radius-value};
+  }
+
+  @each $blob-name, $blob-value in $blobs {
+    --border-blob-#{$blob-name}: #{$blob-value};
+  }
+
+  @each $ease-name, $ease-value in $eases {
+    --ease-#{$ease-name}: #{$ease-value};
+  }
+
+  @each $ease-name, $ease-value in $eases-in {
+    --ease-in-#{$ease-name}: #{$ease-value};
+  }
+
+  @each $ease-name, $ease-value in $eases-out {
+    --ease-out-#{$ease-name}: #{$ease-value};
+  }
+
+  @each $ease-name, $ease-value in $eases-elastic {
+    --ease-elastic-#{$ease-name}: #{$ease-value};
+  }
+
+  @each $font-weight, $weight-value in $font-weights {
+    --fw-#{$font-weight}: #{$weight-value};
+  }
+
+  @each $font-name, $font-value in $fonts {
+    --ft-#{$font-name}: #{$font-value};
+  }
+
+  @each $box-shadow-name, $box-shadow-value in $box-shadows {
+    --box-shadow-#{$box-shadow-name}: #{$box-shadow-value};
+  }
+
+  @each $box-shadow-inner-name, $box-shadow-inner-value in $box-shadows-inner {
+    --box-shadow-inner-#{$box-shadow-inner-name}: #{$box-shadow-inner-value};
+  }
+
+  @each $size-name, $size-value in $sizes {
+    --size-#{$size-name}: #{$size-value};
+  }
+
+  @each $size-name, $size-value in $sizes-fluid {
+    --size-fluid-#{$size-name}: #{$size-value};
+  }
 }
