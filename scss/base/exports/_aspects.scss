@@ -1,7 +1,0 @@
-@use "../../abstracts" as *;
-
-:root {
-  @each $aspect-name, $aspect-value in $aspects {
-    --aspect-#{$aspect-name}: #{$aspect-value};
-  }
-}
