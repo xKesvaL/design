@@ -1,14 +1,26 @@
 .tooltip {
   &-primary {
-    --tooltipColor: var(--color-primary-500);
+    --tooltipColor: var(--color-primary-400);
     --tooltipTextColor: white;
   }
+
   &-secondary {
     --tooltipColor: var(--color-secondary-400);
-    --tooltipTextColor: var(--color-neutral-100);
+    --tooltipTextColor: var(--color-neutral-1000);
   }
+
   &-accent {
-    --tooltipColor: var(--color-accent-300);
-    --tooltipTextColor: var(--color-neutral-100);
+    --tooltipColor: var(--color-accent-400);
+    --tooltipTextColor: var(--color-neutral-1000);
+  }
+
+  &-danger {
+    --tooltipColor: var(--color-danger-500);
+    --tooltipTextColor: white;
+  }
+
+  &-info {
+    --tooltipColor: var(--color-info-500);
+    --tooltipTextColor: white;
   }
 }

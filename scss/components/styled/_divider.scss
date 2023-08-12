@@ -17,4 +17,12 @@
   &-accent {
     --dv-bg: rgba(var(--color-accent-rgb), 0.2);
   }
+
+  &-danger {
+    --dv-bg: rgba(var(--color-danger-rgb), 0.2);
+  }
+
+  &-info {
+    --dv-bg: rgba(var(--color-info-rgb), 0.2);
+  }
 }

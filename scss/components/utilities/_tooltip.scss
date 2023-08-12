@@ -1,28 +1,4 @@
 .tooltip {
-  position: relative;
-  display: inline-block;
-  text-align: center;
-  --tooltipTail: 0.1875rem;
-  --tooltipColor: var(--color-base-300);
-  --tooltipTextColor: var(--color-neutral-900);
-  --tooltipTailOffset: calc(100% + 0.0625rem - var(--tooltipTail));
-
-  &::before,
-  &::after {
-    opacity: 0;
-    transition: 0.3s 0.1s ease-in-out;
-    position: absolute;
-  }
-
-  &::before {
-    max-width: 20rem;
-    border-radius: 0.5rem;
-    padding: 0.25rem 0.5rem;
-    background: var(--tooltipColor);
-    color: var(--tooltipTextColor);
-    width: max-content;
-  }
-
   &-open,
   &:hover,
   &:focus-visible,

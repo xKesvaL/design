@@ -212,6 +212,16 @@ $light: (
     "800": $-clr-base-800,
     "900": $-clr-base-900,
   ),
+  "danger": (
+    "300": $-clr-red-300,
+    "500": $-clr-red-500,
+    "700": $-clr-red-700,
+  ),
+  "info": (
+    "300": $-clr-blue-300,
+    "500": $-clr-blue-500,
+    "700": $-clr-blue-700,
+  ),
 );
 
 $dark: (
@@ -271,5 +281,15 @@ $dark: (
     "300": $-clr-base-700,
     "200": $-clr-base-800,
     "100": $-clr-base-900,
+  ),
+  "danger": (
+    "700": $-clr-red-300,
+    "500": $-clr-red-500,
+    "300": $-clr-red-700,
+  ),
+  "info": (
+    "700": $-clr-blue-300,
+    "500": $-clr-blue-500,
+    "300": $-clr-blue-700,
   ),
 );

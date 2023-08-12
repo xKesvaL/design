@@ -68,4 +68,14 @@
     --ckb-bg-rgb: var(--color-accent-400-rgb);
     --ckb-fg-rgb: var(--color-neutral-900-rgb);
   }
+
+  &-danger {
+    --ckb-bg-rgb: var(--color-danger-500-rgb);
+    --ckb-fg-rgb: var(--color-neutral-900-rgb);
+  }
+
+  &-info {
+    --ckb-bg-rgb: var(--color-info-500-rgb);
+    --ckb-fg-rgb: var(--color-neutral-900-rgb);
+  }
 }
