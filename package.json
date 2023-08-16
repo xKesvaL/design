@@ -1,0 +1,32 @@
+{
+  "name": "@kesval/design",
+  "version": "3.0.0",
+  "description": "A opiniated design system used all across KesvaL's projects.",
+  "main": "scss/main.scss",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xkesval/design.git"
+  },
+  "keywords": [
+    "design",
+    "system",
+    "css",
+    "scss",
+    "sass",
+    "kesval"
+  ],
+  "author": "KesvaL",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xkesval/design/issues"
+  },
+  "homepage": "https://github.com/xkesval/design#readme",
+  "devDependencies": {
+    "prettier": "^3.0.2",
+    "stylelint": "^15.10.2",
+    "stylelint-config-standard-scss": "^10.0.0",
+    "stylelint-order": "^6.0.3",
+    "stylelint-scss": "^5.1.0"
+  }
+}
