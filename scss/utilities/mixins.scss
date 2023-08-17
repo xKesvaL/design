@@ -1,0 +1,47 @@
+@use "./breakpoints.scss" as bp;
+@use "./colors.scss" as colors;
+@use "sass:map";
+
+@mixin mq($size) {
+  @if map.has-key(bp.$breakpoints, $size) {
+    $breakpoint: map.get(bp.$breakpoints, $size);
+    @media screen and (min-width: $breakpoint) {
+      @content;
+    }
+  } @else if meta.type-of($size) == number {
+    @if math.is-unitless($size) {
+      @error 'when using a number with @mq() make sure to include a unit';
+    } @else {
+      @media screen and (min-width: $size) {
+        @content;
+      }
+    }
+  } @else {
+    @error 'the keyword #{$size} is not in the $breakpoints map (xs, sm, md, lg, xl)';
+  }
+}
+
+@mixin define-color($title, $color) {
+  --#{$title}: #{$color};
+  --#{$title}-rgb: #{red($color)}, #{green($color)}, #{blue($color)};
+}
+
+@mixin light-theme {
+  color-scheme: light;
+
+  @each $color, $shade-map in colors.$light {
+    @each $shade, $value in $shade-map {
+      @include define-color("#{$color}-#{$shade}", $value);
+    }
+  }
+}
+
+@mixin dark-theme {
+  color-scheme: dark;
+
+  @each $color, $shade-map in colors.$dark {
+    @each $shade, $value in $shade-map {
+      @include define-color("#{$color}-#{$shade}", $value);
+    }
+  }
+}
