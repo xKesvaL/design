@@ -8,4 +8,5 @@ module.exports = {
     },
     "unit-allowed-list": ["%", "deg", "rem", "ms"],
   },
+  ignoreFiles: ["test/**/*"],
 };

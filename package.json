@@ -3,7 +3,11 @@
   "version": "3.0.0",
   "description": "A opiniated design system used all across KesvaL's projects.",
   "main": "scss/main.scss",
-  "scripts": {},
+  "sass": "scss/main.scss",
+  "scripts": {
+    "build": "sass scss:test",
+    "dev": "sass --watch scss:test"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/xkesval/design.git"
@@ -31,5 +35,8 @@
   },
   "dependencies": {
     "sass": "^1.65.1"
-  }
+  },
+  "files": [
+    "scss/**/*.scss"
+  ]
 }
