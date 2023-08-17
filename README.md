@@ -14,15 +14,7 @@ Then import it in your project:
 import '@kesval/design';
 ```
 
-This will import everything that is standard css, so this is basically everything unstyled, and just basic styling (spacing, typography, etc).
-
-If you want to use the utilities, you can import them separately:
-
-```js
-  import '@kesval/design/scss/utilities.scss';
-```
-
-Or using SvelteKit with Vite:
+This will import everything that is standard css, so this is only for static things, such as the base (general, reset, etc.). But, you will probably need to use the utilities (media-query for example), and you can import them like this with Vite (recommended) :
 
 ```js
 import { sveltekit } from '@sveltejs/kit/vite';
@@ -41,7 +33,19 @@ export default defineConfig({
 });
 ```
 
+Or, if you are using another bundler, it's quite the same:  
+
+```js
+  import '@kesval/design/scss/utilities.scss';
+```
+
 Now, every utility class is available in your project, without having to import them each time. They won't take any space in your bundle, as they are only imported when used.
+
+## Fonts
+
+Font names are defined in `core/fonts.scss`, but they are not imported. I leave it up to you to import the fonts you need in your project and define the font-faces with the correct font-family name. This is so you choose where you want to import your fonts from (Google Fonts, Self hosted, etc.).
+
+Default fonts are `Rubik` for titles or important things and `Montserrat` for everything else. I recommend you to use 400 and 700 weights for both fonts.
 
 ## Ressources
 
