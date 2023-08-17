@@ -4,15 +4,15 @@
  */
 
 $-clr-base-50: hsl(240, 50%, 97%);
-$-clr-base-100: hsl(240, 25%, 93%);
-$-clr-base-200: hsl(244, 25%, 86%);
-$-clr-base-300: hsl(243, 15%, 73%);
-$-clr-base-400: hsl(245, 15%, 65%);
-$-clr-base-500: hsl(245, 15%, 47%);
-$-clr-base-600: hsl(245, 15%, 35%);
-$-clr-base-700: hsl(245, 15%, 27%);
-$-clr-base-800: hsl(247, 25%, 14%);
-$-clr-base-900: hsl(252, 25%, 7%);
+$-clr-base-100: hsl(240, 25%, 95%);
+$-clr-base-200: hsl(244, 15%, 86%);
+$-clr-base-300: hsl(243, 10%, 73%);
+$-clr-base-400: hsl(245, 5%, 65%);
+$-clr-base-500: hsl(245, 2.5%, 47%);
+$-clr-base-600: hsl(245, 5%, 35%);
+$-clr-base-700: hsl(245, 10%, 27%);
+$-clr-base-800: hsl(247, 15%, 14%);
+$-clr-base-900: hsl(252, 25%, 5%);
 $-clr-base-950: hsl(260, 50%, 3%);
 
 $-clr-red-50: #fef2f2;
@@ -221,9 +221,6 @@ $-clr-rose-950: #4c0519;
 
 // THEMES
 
-$-clr-indigo-500: #6366f1;
-$-clr-amber-500: #f59e0b;
-
 $light: (
   "base": (
     "50": $-clr-base-50,
@@ -250,19 +247,6 @@ $light: (
     "800": $-clr-indigo-800,
     "900": $-clr-indigo-900,
     "950": $-clr-indigo-950,
-  ),
-  "accent": (
-    "50": $-clr-amber-50,
-    "100": $-clr-amber-100,
-    "200": $-clr-amber-200,
-    "300": $-clr-amber-300,
-    "400": $-clr-amber-400,
-    "500": $-clr-amber-500,
-    "600": $-clr-amber-600,
-    "700": $-clr-amber-700,
-    "800": $-clr-amber-800,
-    "900": $-clr-amber-900,
-    "950": $-clr-amber-950,
   ),
   "success": (
     "50": $-clr-green-50,
@@ -331,19 +315,6 @@ $dark: (
     "800": $-clr-indigo-200,
     "900": $-clr-indigo-100,
     "950": $-clr-indigo-50,
-  ),
-  "accent": (
-    "50": $-clr-amber-950,
-    "100": $-clr-amber-900,
-    "200": $-clr-amber-800,
-    "300": $-clr-amber-700,
-    "400": $-clr-amber-600,
-    "500": $-clr-amber-500,
-    "600": $-clr-amber-400,
-    "700": $-clr-amber-300,
-    "800": $-clr-amber-200,
-    "900": $-clr-amber-100,
-    "950": $-clr-amber-50,
   ),
   "success": (
     "50": $-clr-green-950,
