@@ -26,20 +26,14 @@ export default defineConfig({
  css: {
   preprocessorOptions: {
    scss: {
-    additionalData: '@use "node_modules/@kesval/design/scss/utilities" as *;'
+    additionalData: '@use "node_modules/@kesval/design/scss/utilities" as u;'
    }
   }
  }
 });
 ```
 
-Or, if you are using another bundler, it's quite the same:  
-
-```js
-  import '@kesval/design/scss/utilities.scss';
-```
-
-Now, every utility class is available in your project, without having to import them each time. They won't take any space in your bundle, as they are only imported when used.
+Now you can use the utilies everywhere prefixed with `u.`, for example, `@include u.mq(md) { ...code }`.
 
 ## Fonts
 
