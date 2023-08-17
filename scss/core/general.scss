@@ -34,6 +34,7 @@
 body {
   background: var(--base-50);
   color: var(--base-950);
+  font-family: var(--ft-sans);
 }
 
 .visually-hidden {
@@ -44,4 +45,11 @@ body {
   position: absolute;
   white-space: nowrap;
   width: 1px;
+}
+
+:where(h1, h2, h3, h4, h5, h6) {
+  font-family: var(--ft-title);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  line-height: 1.25;
 }

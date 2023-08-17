@@ -20,4 +20,8 @@
       }
     }
   }
+
+  @each $font-name, $font-value in util.$fonts {
+    --ft-#{$font-name}: #{$font-value};
+  }
 }
