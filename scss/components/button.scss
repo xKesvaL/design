@@ -1,7 +1,7 @@
 button,
 .button {
-  --btn-bg: var(--base-50-rgb);
-  --btn-border: var(--base-500-rgb);
+  --btn-bg: var(--base-300-rgb);
+  --btn-border: var(--base-300-rgb);
 
   text-transform: none;
   display: inline-flex;
@@ -19,7 +19,7 @@ button,
   border-radius: 0.25rem;
   transition:
     0.3s ease,
-    transform 0.05s ease;
+    transform 0.1s ease;
 
   &:not(.outline) {
     background: rgba(var(--btn-bg), 1);
@@ -46,6 +46,10 @@ button,
       background: rgba(var(--btn-bg), 1);
       transform: scale(1.02);
     }
+
+    &:active {
+      transform: scale(0.98);
+    }
   }
 
   &:disabled {
@@ -54,23 +58,23 @@ button,
   }
 
   &.primary {
-    --btn-bg: var(--primary-300-rgb);
-    --btn-border: var(--primary-300-rgb);
+    --btn-bg: var(--primary-400-rgb);
+    --btn-border: var(--primary-400-rgb);
   }
 
   &.success {
-    --btn-bg: var(--success-300-rgb);
-    --btn-border: var(--success-300-rgb);
+    --btn-bg: var(--success-400-rgb);
+    --btn-border: var(--success-400-rgb);
   }
 
   &.danger {
-    --btn-bg: var(--danger-300-rgb);
-    --btn-border: var(--danger-300-rgb);
+    --btn-bg: var(--danger-400-rgb);
+    --btn-border: var(--danger-400-rgb);
   }
 
   &.info {
-    --btn-bg: var(--info-300-rgb);
-    --btn-border: var(--info-300-rgb);
+    --btn-bg: var(--info-400-rgb);
+    --btn-border: var(--info-400-rgb);
   }
 
   &.square {
