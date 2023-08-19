@@ -133,3 +133,4 @@ dist
 
 test/**/*.css
 test/**/*.css.map
+!test/main.css

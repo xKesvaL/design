@@ -181,17 +181,18 @@ $-clr-magenta-800: hsl(288, 75%, 17.5%);
 $-clr-magenta-900: hsl(288, 75%, 7.5%);
 $-clr-magenta-950: hsl(288, 75%, 3%);
 
-$-clr-pink-50: hsl(312 75% 97%);
-$-clr-pink-100: hsl(312 75% 95%);
-$-clr-pink-200: hsl(312 75% 82.5%);
-$-clr-pink-300: hsl(312 75% 70%);
-$-clr-pink-400: hsl(312 75% 60%);
-$-clr-pink-500: hsl(312 75% 50%);
-$-clr-pink-600: hsl(312 75% 40%);
-$-clr-pink-700: hsl(312 75% 30%);
-$-clr-pink-800: hsl(312 75% 17.5%);
-$-clr-pink-900: hsl(312 75% 7.5%);
-$-clr-pink-950: hsl(312 75% 3%);
+// supposed to be 312, but i like this color more
+$-clr-pink-50: hsl(300, 73%, 97%);
+$-clr-pink-100: hsl(300 75% 95%);
+$-clr-pink-200: hsl(300 75% 82.5%);
+$-clr-pink-300: hsl(300 75% 70%);
+$-clr-pink-400: hsl(300 75% 60%);
+$-clr-pink-500: hsl(300 75% 50%);
+$-clr-pink-600: hsl(300 75% 40%);
+$-clr-pink-700: hsl(300 75% 30%);
+$-clr-pink-800: hsl(300 75% 17.5%);
+$-clr-pink-900: hsl(300 75% 7.5%);
+$-clr-pink-950: hsl(300 75% 3%);
 
 $-clr-bordeaux-50: hsl(336, 76%, 97%);
 $-clr-bordeaux-100: hsl(336, 76%, 95%);
@@ -235,15 +236,15 @@ $light: (
     "950": $-clr-purple-950,
   ),
   "secondary": (
-    "100": $-clr-magenta-100,
-    "200": $-clr-magenta-200,
-    "300": $-clr-magenta-300,
-    "400": $-clr-magenta-400,
-    "500": $-clr-magenta-500,
-    "600": $-clr-magenta-600,
-    "700": $-clr-magenta-700,
-    "800": $-clr-magenta-800,
-    "900": $-clr-magenta-900,
+    "100": $-clr-pink-100,
+    "200": $-clr-pink-200,
+    "300": $-clr-pink-300,
+    "400": $-clr-pink-400,
+    "500": $-clr-pink-500,
+    "600": $-clr-pink-600,
+    "700": $-clr-pink-700,
+    "800": $-clr-pink-800,
+    "900": $-clr-pink-900,
   ),
   "success": (
     "50": $-clr-green-50,
@@ -314,15 +315,15 @@ $dark: (
     "950": $-clr-purple-50,
   ),
   "secondary": (
-    "900": $-clr-magenta-100,
-    "800": $-clr-magenta-200,
-    "700": $-clr-magenta-300,
-    "600": $-clr-magenta-400,
-    "500": $-clr-magenta-500,
-    "400": $-clr-magenta-600,
-    "300": $-clr-magenta-700,
-    "200": $-clr-magenta-800,
-    "100": $-clr-magenta-900,
+    "900": $-clr-pink-100,
+    "800": $-clr-pink-200,
+    "700": $-clr-pink-300,
+    "600": $-clr-pink-400,
+    "500": $-clr-pink-500,
+    "400": $-clr-pink-600,
+    "300": $-clr-pink-700,
+    "200": $-clr-pink-800,
+    "100": $-clr-pink-900,
   ),
   "success": (
     "50": $-clr-green-950,
