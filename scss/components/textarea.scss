@@ -1,0 +1,57 @@
+textarea,
+.textarea {
+  --txtr-clr: var(--base-900-rgb);
+  resize: vertical;
+  min-height: 3rem;
+  display: flex;
+  align-items: center;
+
+  height: 2.5rem;
+  padding: 0.5rem 0.75rem;
+  width: 100%;
+
+  border-radius: 0.5rem;
+  border: 1px solid rgba(var(--txtr-clr), 0.7);
+  font-size: var(--fs-200);
+
+  background: rgba(var(--base-50-rgb), 0.7);
+  transition: 0.2s ease;
+  overflow: hidden;
+
+  &::-webkit-resizer {
+    border-width: 8px;
+    border-style: solid;
+    border-color: transparent rgba(var(--txtr-clr), 0.7)
+      rgba(var(--txtr-clr), 0.7) transparent;
+    border-radius: 0 0 0.4rem 0;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  &.primary {
+    --txtr-clr: var(--primary-500-rgb);
+  }
+
+  &.success {
+    --txtr-clr: var(--success-500-rgb);
+  }
+
+  &.danger {
+    --txtr-clr: var(--danger-500-rgb);
+  }
+
+  &.info {
+    --txtr-clr: var(--info-500-rgb);
+  }
+
+  &:not(.no-anim, :disabled) {
+    &:hover,
+    &:focus-within {
+      border-color: rgba(var(--txtr-clr), 1);
+      background: rgba(var(--base-50-rgb), 1);
+    }
+  }
+}

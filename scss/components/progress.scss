@@ -1,0 +1,54 @@
+progress,
+.progress {
+  --prg-clr: var(--base-900-rgb);
+  --prg-bg: var(--base-200-rgb);
+  height: 1rem;
+  border-radius: 9999px;
+  overflow: hidden;
+
+  background: rgba(var(--prg-bg), 0.7);
+  transition: 0.2s ease;
+
+  &::-webkit-progress-bar {
+    background: rgba(var(--prg-bg), 0.7);
+  }
+
+  &::-webkit-progress-value {
+    background: rgba(var(--prg-clr), 1);
+  }
+
+  &::-moz-progress-bar {
+    background: rgba(var(--prg-clr), 1);
+  }
+
+  &::-ms-fill {
+    background: rgba(var(--prg-clr), 1);
+  }
+
+  &:not(.no-anim) {
+    &:hover,
+    &:focus-within {
+      background: rgba(var(--prg-bg), 1);
+    }
+  }
+
+  &.primary {
+    --prg-clr: var(--primary-500-rgb);
+    --prg-bg: var(--primary-200-rgb);
+  }
+
+  &.success {
+    --prg-clr: var(--success-500-rgb);
+    --prg-bg: var(--success-200-rgb);
+  }
+
+  &.danger {
+    --prg-clr: var(--danger-500-rgb);
+    --prg-bg: var(--danger-200-rgb);
+  }
+
+  &.info {
+    --prg-clr: var(--info-500-rgb);
+    --prg-bg: var(--info-200-rgb);
+  }
+}

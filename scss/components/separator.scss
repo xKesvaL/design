@@ -1,0 +1,34 @@
+hr,
+.hr,
+.separator {
+  --sep-clr: var(--base-500-rgb);
+
+  border: 0;
+  background: rgba(var(--sep-clr), 1);
+
+  height: 1px;
+  width: 100%;
+  margin: 1rem 0;
+
+  &[data-orientation="vertical"] {
+    height: 100%;
+    width: 1px;
+    margin: 0 1rem;
+  }
+
+  &.primary {
+    --sep-clr: var(--primary-500-rgb);
+  }
+
+  &.success {
+    --sep-clr: var(--success-500-rgb);
+  }
+
+  &.danger {
+    --sep-clr: var(--danger-500-rgb);
+  }
+
+  &.info {
+    --sep-clr: var(--info-500-rgb);
+  }
+}

@@ -37,7 +37,7 @@ button,
     }
   }
 
-  &:not(.no-anim) {
+  &:not(.no-anim, :disabled) {
     &:not(.outline) {
       background: rgba(var(--btn-bg), 0.9);
     }
@@ -53,8 +53,8 @@ button,
   }
 
   &:disabled {
-    opacity: 0.4;
-    pointer-events: none;
+    opacity: 0.5;
+    cursor: not-allowed;
   }
 
   &.primary {

@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Rubik:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Rubik:wght@700&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -16,11 +16,13 @@
     <main>
       <section class="container">
         <h2>Badges</h2>
-        <span class="badge">Default badge</span>
-        <span class="badge primary">Primary badge</span>
-        <span class="badge success">Success badge</span>
-        <span class="badge info">Info badge</span>
-        <span class="badge danger">Danger badge</span>
+        <div class="flex">
+          <span class="badge">Default badge</span>
+          <span class="badge primary">Primary badge</span>
+          <span class="badge success">Success badge</span>
+          <span class="badge info">Info badge</span>
+          <span class="badge danger">Danger badge</span>
+        </div>
       </section>
       <section class="container">
         <h2>Buttons</h2>
@@ -55,7 +57,7 @@
             <form style="display: flex; flex-direction: column; gap: 1rem">
               <label>
                 <span>Name</span>
-                <input placeholder="Some name" />
+                <input type="text" placeholder="Some name" />
               </label>
               <label>
                 <span>Framework</span>
@@ -75,18 +77,564 @@
         </div>
       </section>
       <section class="container">
-        <h2>Checkboxs</h2>
-        <input type="checkbox" />
-        <input type="checkbox" class="primary" />
-        <input type="checkbox" class="success" />
-        <input type="checkbox" class="info" />
-        <input type="checkbox" class="danger" />
+        <h2>Checkboxes</h2>
+        <div class="flex">
+          <input type="checkbox" class="checkbox" />
+          <input type="checkbox" class="checkbox primary" />
+          <input type="checkbox" class="checkbox success" />
+          <input type="checkbox" class="checkbox info" />
+          <input type="checkbox" class="checkbox danger" />
 
-        <input type="checkbox" disabled />
-        <input type="checkbox" disabled class="primary" />
-        <input type="checkbox" disabled class="success" />
-        <input type="checkbox" disabled class="info" />
-        <input type="checkbox" disabled class="danger" />
+          <input type="checkbox" disabled class="checkbox" />
+          <input type="checkbox" disabled class="checkbox primary" />
+          <input type="checkbox" disabled class="checkbox success" />
+          <input type="checkbox" disabled class="checkbox info" />
+          <input type="checkbox" disabled class="checkbox danger" />
+        </div>
+      </section>
+      <section class="container">
+        <h2>Forms</h2>
+        <form style="max-width: 22rem">
+          <label>
+            <span>Input</span>
+            <input type="text" placeholder="Some input" />
+            <span>Description</span>
+          </label>
+
+          <label>
+            <span>Input Disabled</span>
+            <input type="text" placeholder="Some input" disabled />
+            <span>Description disabled</span>
+          </label>
+
+          <button class="primary">Submit</button>
+        </form>
+      </section>
+      <section class="container">
+        <h2>Inputs - Text</h2>
+        <div class="flex" style="flex-wrap: nowrap">
+          <input type="text" placeholder="Some input" />
+          <input type="text" placeholder="Some input" class="primary" />
+          <input type="text" placeholder="Some input" class="success" />
+          <input type="text" placeholder="Some input" class="info" />
+          <input type="text" placeholder="Some input" class="danger" />
+
+          <input type="text" placeholder="Some input" disabled />
+          <input
+            type="text"
+            placeholder="Some input"
+            disabled
+            class="primary"
+          />
+          <input
+            type="text"
+            placeholder="Some input"
+            disabled
+            class="success"
+          />
+          <input type="text" placeholder="Some input" disabled class="info" />
+          <input type="text" placeholder="Some input" disabled class="danger" />
+        </div>
+      </section>
+      <section class="container">
+        <h2>Inputs - File</h2>
+        <div class="flex" style="flex-wrap: nowrap">
+          <input type="file" placeholder="Some input" />
+          <input type="file" placeholder="Some input" class="primary" />
+          <input type="file" placeholder="Some input" class="success" />
+          <input type="file" placeholder="Some input" class="info" />
+          <input type="file" placeholder="Some input" class="danger" />
+        </div>
+        <br />
+        <div class="flex" style="flex-wrap: nowrap">
+          <input type="file" placeholder="Some input" disabled />
+          <input
+            type="file"
+            placeholder="Some input"
+            disabled
+            class="primary"
+          />
+          <input
+            type="file"
+            placeholder="Some input"
+            disabled
+            class="success"
+          />
+          <input type="file" placeholder="Some input" disabled class="info" />
+          <input type="file" placeholder="Some input" disabled class="danger" />
+        </div>
+      </section>
+      <section class="container">
+        <h2>Progress bars</h2>
+        <div class="flex">
+          <progress value="0" max="100"></progress>
+          <progress value="25" max="100" class="primary"></progress>
+          <progress value="50" max="100" class="success"></progress>
+          <progress value="75" max="100" class="info"></progress>
+          <progress value="100" max="100" class="danger"></progress>
+        </div>
+      </section>
+      <section class="container">
+        <h2>Radios</h2>
+        <div class="flex">
+          <input type="radio" name="radio" />
+          <input type="radio" name="radio" class="primary" />
+          <input type="radio" name="radio" class="success" />
+          <input type="radio" name="radio" class="info" />
+          <input type="radio" name="radio" class="danger" />
+
+          <input type="radio" name="radio" disabled />
+          <input type="radio" name="radio" disabled class="primary" />
+          <input type="radio" name="radio" disabled class="success" />
+          <input type="radio" name="radio" disabled class="info" />
+          <input type="radio" name="radio" disabled class="danger" />
+        </div>
+      </section>
+      <section class="container">
+        <h2>Selects (native)</h2>
+        <div class="flex" style="flex-wrap: nowrap">
+          <select>
+            <option>Select</option>
+            <option>Svelte 🥰</option>
+            <option>React 🤢</option>
+            <option>Angular 🤨</option>
+          </select>
+          <select class="primary">
+            <option>Select</option>
+            <option>Svelte 🥰</option>
+            <option>React 🤢</option>
+            <option>Angular 🤨</option>
+          </select>
+          <select class="success">
+            <option>Select</option>
+            <option>Svelte 🥰</option>
+            <option>React 🤢</option>
+            <option>Angular 🤨</option>
+          </select>
+          <select class="info">
+            <option>Select</option>
+            <option>Svelte 🥰</option>
+            <option>React 🤢</option>
+            <option>Angular 🤨</option>
+          </select>
+          <select class="danger">
+            <option>Select</option>
+            <option>Svelte 🥰</option>
+            <option>React 🤢</option>
+            <option>Angular 🤨</option>
+          </select>
+        </div>
+        <br />
+        <div class="flex" style="flex-wrap: nowrap">
+          <select disabled>
+            <option>Select</option>
+            <option>Svelte 🥰</option>
+            <option>React 🤢</option>
+            <option>Angular 🤨</option>
+          </select>
+          <select disabled class="primary">
+            <option>Select</option>
+            <option>Svelte 🥰</option>
+            <option>React 🤢</option>
+            <option>Angular 🤨</option>
+          </select>
+          <select disabled class="success">
+            <option>Select</option>
+            <option>Svelte 🥰</option>
+            <option>React 🤢</option>
+            <option>Angular 🤨</option>
+          </select>
+          <select disabled class="info">
+            <option>Select</option>
+            <option>Svelte 🥰</option>
+            <option>React 🤢</option>
+            <option>Angular 🤨</option>
+          </select>
+          <select disabled class="danger">
+            <option>Select</option>
+            <option>Svelte 🥰</option>
+            <option>React 🤢</option>
+            <option>Angular 🤨</option>
+          </select>
+        </div>
+      </section>
+      <section class="container">
+        <h2>Separators</h2>
+        <div class="flex" style="height: 220px">
+          <div class="flex" style="flex: 1">
+            <hr />
+            <hr class="primary" />
+            <hr class="success" />
+            <hr class="info" />
+            <hr class="danger" />
+          </div>
+          <div class="flex" style="height: 220px">
+            <hr data-orientation="vertical" />
+            <hr data-orientation="vertical" class="primary" />
+            <hr data-orientation="vertical" class="success" />
+            <hr data-orientation="vertical" class="info" />
+            <hr data-orientation="vertical" class="danger" />
+          </div>
+        </div>
+      </section>
+      <section class="container">
+        <h2>Switches</h2>
+        <div class="flex">
+          <input type="checkbox" class="switch" />
+          <input type="checkbox" class="switch primary" />
+          <input type="checkbox" class="switch success" />
+          <input type="checkbox" class="switch info" />
+          <input type="checkbox" class="switch danger" />
+
+          <input type="checkbox" disabled class="switch" />
+          <input type="checkbox" disabled class="switch primary" />
+          <input type="checkbox" disabled class="switch success" />
+          <input type="checkbox" disabled class="switch info" />
+          <input type="checkbox" disabled class="switch danger" />
+        </div>
+      </section>
+      <section class="container">
+        <h2>Tables</h2>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>hi</th>
+              <th>hi</th>
+              <th>hi</th>
+              <th>hi</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>hi</td>
+              <td>hi</td>
+              <td>hi</td>
+              <td>hi</td>
+            </tr>
+            <tr>
+              <td>hi</td>
+              <td>hi</td>
+              <td>hi</td>
+              <td>hi</td>
+            </tr>
+            <tr>
+              <td>hi</td>
+              <td>hi</td>
+              <td>hi</td>
+              <td>hi</td>
+            </tr>
+          </tbody>
+        </table>
+        <br />
+        <table class="table table-zebra">
+          <thead>
+            <tr>
+              <th>hi</th>
+              <th>hi</th>
+              <th>hi</th>
+              <th>hi</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>hi</td>
+              <td>hi</td>
+              <td>hi</td>
+              <td>hi</td>
+            </tr>
+            <tr>
+              <td>hi</td>
+              <td>hi</td>
+              <td>hi</td>
+              <td>hi</td>
+            </tr>
+            <tr>
+              <td>hi</td>
+              <td>hi</td>
+              <td>hi</td>
+              <td>hi</td>
+            </tr>
+          </tbody>
+        </table>
+        <br />
+        <div style="overflow-x: auto; height: 200px">
+          <table class="table table-pin-rows">
+            <thead>
+              <tr>
+                <th>A</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Ant-Man</td>
+              </tr>
+              <tr>
+                <td>Aquaman</td>
+              </tr>
+              <tr>
+                <td>Asterix</td>
+              </tr>
+              <tr>
+                <td>The Atom</td>
+              </tr>
+              <tr>
+                <td>The Avengers</td>
+              </tr>
+            </tbody>
+            <thead>
+              <tr>
+                <th>B</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Batgirl</td>
+              </tr>
+              <tr>
+                <td>Batman</td>
+              </tr>
+              <tr>
+                <td>Batwoman</td>
+              </tr>
+              <tr>
+                <td>Black Canary</td>
+              </tr>
+              <tr>
+                <td>Black Panther</td>
+              </tr>
+            </tbody>
+            <thead>
+              <tr>
+                <th>C</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Captain America</td>
+              </tr>
+              <tr>
+                <td>Captain Marvel</td>
+              </tr>
+              <tr>
+                <td>Catwoman</td>
+              </tr>
+              <tr>
+                <td>Conan the Barbarian</td>
+              </tr>
+            </tbody>
+            <thead>
+              <tr>
+                <th>D</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Daredevil</td>
+              </tr>
+              <tr>
+                <td>The Defenders</td>
+              </tr>
+              <tr>
+                <td>Doc Savage</td>
+              </tr>
+              <tr>
+                <td>Doctor Strange</td>
+              </tr>
+            </tbody>
+            <thead>
+              <tr>
+                <th>E</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Elektra</td>
+              </tr>
+            </tbody>
+            <thead>
+              <tr>
+                <th>F</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Fantastic Four</td>
+              </tr>
+            </tbody>
+            <thead>
+              <tr>
+                <th>G</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Ghost Rider</td>
+              </tr>
+              <tr>
+                <td>Green Arrow</td>
+              </tr>
+              <tr>
+                <td>Green Lantern</td>
+              </tr>
+              <tr>
+                <td>Guardians of the Galaxy</td>
+              </tr>
+            </tbody>
+            <thead>
+              <tr>
+                <th>H</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Hawkeye</td>
+              </tr>
+              <tr>
+                <td>Hellboy</td>
+              </tr>
+              <tr>
+                <td>Incredible Hulk</td>
+              </tr>
+            </tbody>
+            <thead>
+              <tr>
+                <th>I</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Iron Fist</td>
+              </tr>
+              <tr>
+                <td>Iron Man</td>
+              </tr>
+            </tbody>
+            <thead>
+              <tr>
+                <th>M</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Marvelman</td>
+              </tr>
+            </tbody>
+            <thead>
+              <tr>
+                <th>R</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Robin</td>
+              </tr>
+              <tr>
+                <td>The Rocketeer</td>
+              </tr>
+            </tbody>
+            <thead>
+              <tr>
+                <th>S</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>The Shadow</td>
+              </tr>
+              <tr>
+                <td>Spider-Man</td>
+              </tr>
+              <tr>
+                <td>Sub-Mariner</td>
+              </tr>
+              <tr>
+                <td>Supergirl</td>
+              </tr>
+              <tr>
+                <td>Superman</td>
+              </tr>
+            </tbody>
+            <thead>
+              <tr>
+                <th>T</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Teenage Mutant Ninja Turtles</td>
+              </tr>
+              <tr>
+                <td>Thor</td>
+              </tr>
+            </tbody>
+            <thead>
+              <tr>
+                <th>W</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>The Wasp</td>
+              </tr>
+              <tr>
+                <td>Watchmen</td>
+              </tr>
+              <tr>
+                <td>Wolverine</td>
+              </tr>
+              <tr>
+                <td>Wonder Woman</td>
+              </tr>
+            </tbody>
+            <thead>
+              <tr>
+                <th>X</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>X-Men</td>
+              </tr>
+            </tbody>
+            <thead>
+              <tr>
+                <th>Z</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Zatanna</td>
+              </tr>
+              <tr>
+                <td>Zatara</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <section class="container">
+        <h2>Text areas</h2>
+        <div class="flex" style="flex-wrap: nowrap">
+          <textarea placeholder="Some input"></textarea>
+          <textarea placeholder="Some input" class="primary"></textarea>
+          <textarea placeholder="Some input" class="success"></textarea>
+          <textarea placeholder="Some input" class="info"></textarea>
+          <textarea placeholder="Some input" class="danger"></textarea>
+
+          <textarea placeholder="Some input" disabled></textarea>
+          <textarea
+            placeholder="Some input"
+            disabled
+            class="primary"
+          ></textarea>
+          <textarea
+            placeholder="Some input"
+            disabled
+            class="success"
+          ></textarea>
+          <textarea placeholder="Some input" disabled class="info"></textarea>
+          <textarea placeholder="Some input" disabled class="danger"></textarea>
+        </div>
       </section>
     </main>
   </body>

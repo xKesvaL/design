@@ -144,32 +144,19 @@ body {
   text-decoration: inherit;
 }
 
-:where(
-    a[href],
-    area,
-    button,
-    input,
-    label[for],
-    select,
-    summary,
-    textarea,
-    [tabindex]:not([tabindex*="-"])
-  ) {
+:where(a[href], button, select, [tabindex]:not([tabindex*="-"])) {
   cursor: pointer;
   touch-action: manipulation;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  :focus-visible {
-    transition: outline-offset 145ms cubic-bezier(0.25, 0, 0.4, 1);
-  }
-  :where(:not(:active)):focus-visible {
-    transition-duration: 0.25s;
-  }
+:where(:focus) {
+  outline: none;
 }
 
-:where(:not(:active)):focus-visible {
+*:focus-visible {
+  outline: solid 1.5px;
   outline-offset: 3px;
+  transition: outline-offset 0s;
 }
 
 /* Make sure users can't select button text */

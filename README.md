@@ -3,7 +3,9 @@
 - [@kesval/design](#kesvaldesign)
   - [Motivation](#motivation)
     - [Semantics ?](#semantics-)
+    - [Classes](#classes)
   - [Usage](#usage)
+  - [Why is `X` not included ?](#why-is-x-not-included-)
   - [Fonts](#fonts)
   - [Animations](#animations)
   - [Ressources](#ressources)
@@ -50,6 +52,14 @@ This is not semantic, nor accessible, and it's not always easy to remember what 
 
 As you can see, it requires only one class and the rest is pure HTML. This also forces you to use the correct HTML tags, which is good for accessibility.
 
+### Classes
+
+Classes are still available to use if you want to style something specific. For example, you most likely would sometimes want a button that is a link, and I won't link the button component to the `a` tag. So how do you do it ? Well, for every component, its name is also a class. So if you want a button that is a link, you would do this :
+
+```html
+<a class="button" href="#">Link button</button>
+```
+
 ## Usage
 
 To use this library, install it via npm:
@@ -84,6 +94,10 @@ export default defineConfig({
 ```
 
 Now you can use the utilies everywhere prefixed with `u.`, for example, `@include u.mq(md) { ...code }`.
+
+## Why is `X` not included ?
+
+I want to keep the package lightweight and only include things that I use in every project. Everything else that I need that, for example, requires JavaScript (such as a dropdown), I will have in my [SvelteKit Starter](https://github.com/xKesvaL/starter-svelte). You might want to check it out, everything is already set up for you. Even internationalization.
 
 ## Fonts
 

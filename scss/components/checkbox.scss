@@ -1,4 +1,3 @@
-input[type="checkbox"],
 .checkbox {
   --ckb-bg-rgb: var(--base-900-rgb);
   --ckb-fg-rgb: var(--base-100-rgb);
@@ -10,7 +9,8 @@ input[type="checkbox"],
   appearance: none;
   border-radius: 0.5rem;
   padding: 0;
-  border: 1px solid rgba(var(--ckb-bg-rgb), 1);
+  border: 1px solid rgba(var(--ckb-bg-rgb), 0.7);
+  transition: 0.2s ease;
 
   &:not(.no-anim) {
     &:checked,
@@ -21,6 +21,12 @@ input[type="checkbox"],
 
     &:indeterminate {
       animation: checkmark 0.2s ease-out;
+    }
+  }
+
+  &:not(.no-anim, :disabled) {
+    &:hover {
+      border-color: rgba(var(--ckb-bg-rgb), 1);
     }
   }
 
@@ -47,6 +53,7 @@ input[type="checkbox"],
         rgba(var(--ckb-fg-rgb)) 50%,
         rgba(var(--ckb-bg-rgb)) 50.99%
       );
+    border: 1px solid rgba(var(--ckb-bg-rgb), 1);
   }
 
   &:indeterminate {
