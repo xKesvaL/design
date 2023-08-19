@@ -1,0 +1,43 @@
+.badge {
+  --bdg-bg: var(--base-300-rgb);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.125rem 0.625rem;
+  font-size: var(--fs-200);
+  font-weight: 600;
+
+  background: rgba(var(--bdg-bg), 1);
+  border-radius: 9999px;
+  transition: 0.3s ease;
+
+  &:not(.no-anim) {
+    background: rgba(var(--bdg-bg), 0.9);
+
+    &:hover {
+      background: rgba(var(--bdg-bg), 1);
+    }
+  }
+
+  &.primary {
+    --bdg-bg: var(--primary-400-rgb);
+  }
+
+  &.secondary {
+    --bdg-bg: var(--secondary-400-rgb);
+  }
+
+  &.info {
+    --bdg-bg: var(--info-400-rgb);
+  }
+
+  &.success {
+    --bdg-bg: var(--success-400-rgb);
+  }
+
+  &.danger {
+    --bdg-bg: var(--danger-400-rgb);
+  }
+}

@@ -1,0 +1,83 @@
+input[type="radio"],
+.radio {
+  --rd-clr: var(--base-900-rgb);
+
+  height: 1.5rem;
+  width: 1.5rem;
+  cursor: pointer;
+  appearance: none;
+  border-radius: 9999px;
+  border: 1px solid rgba(var(--rd-clr), 0.7);
+  flex-shrink: 0;
+  padding: 0;
+  transition: 0.2s ease;
+
+  &:focus-visible {
+    outline: 2px solid rgba(var(--rd-clr), 0.7);
+  }
+
+  &:checked,
+  &[checked="true"],
+  &[aria-checked="true"] {
+    background: rgba(var(--rd-clr), 1);
+    border: 1px solid rgba(var(--rd-clr), 1);
+
+    box-shadow:
+      0 0 0 4px var(--base-100) inset,
+      0 0 0 4px var(--base-100) inset;
+
+    &:not(.no-anim) {
+      animation: radiomark 0.2s ease-out;
+    }
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  &:not(.no-anim, :disabled) {
+    &:hover,
+    &:focus-within {
+      border-color: rgba(var(--rd-clr), 1);
+    }
+  }
+
+  &.primary {
+    --rd-clr: var(--primary-500-rgb);
+  }
+
+  &.secondary {
+    --rd-clr: var(--secondary-500-rgb);
+  }
+
+  &.success {
+    --rd-clr: var(--success-500-rgb);
+  }
+
+  &.danger {
+    --rd-clr: var(--danger-500-rgb);
+  }
+
+  &.info {
+    --rd-clr: var(--info-500-rgb);
+  }
+}
+
+@keyframes radiomark {
+  0% {
+    box-shadow:
+      0 0 0 12px var(--base-100) inset,
+      0 0 0 12px var(--base-100) inset;
+  }
+  50% {
+    box-shadow:
+      0 0 0 3px var(--base-100) inset,
+      0 0 0 3px var(--base-100) inset;
+  }
+  100% {
+    box-shadow:
+      0 0 0 4px var(--base-100) inset,
+      0 0 0 4px var(--base-100) inset;
+  }
+}

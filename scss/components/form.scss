@@ -1,0 +1,29 @@
+form,
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  label {
+    span {
+      display: block;
+      margin-bottom: 0.25rem;
+      font-size: var(--fs-300);
+      font-weight: 500;
+
+      & ~ span {
+        font-size: var(--fs-200);
+        font-weight: 400;
+        color: rgba(var(--base-950-rgb), 0.7);
+        margin-top: 0.25rem;
+      }
+    }
+
+    &:has(:disabled) {
+      span {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+    }
+  }
+}

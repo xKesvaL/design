@@ -1,0 +1,30 @@
+@use "../utilities/" as util;
+
+:root {
+  @include util.dark-theme;
+
+  color-scheme: dark;
+
+  &[data-theme="light"] {
+    @include util.light-theme;
+    color-scheme: light;
+  }
+
+  @each $screen-size, $size-map in util.$font-sizes {
+    @if $screen-size == xs {
+      @each $size-name, $size-value in $size-map {
+        --fs-#{$size-name}: #{$size-value};
+      }
+    } @else {
+      @include util.mq($screen-size) {
+        @each $size-name, $size-value in $size-map {
+          --fs-#{$size-name}: #{$size-value};
+        }
+      }
+    }
+  }
+
+  @each $font-name, $font-value in util.$fonts {
+    --ft-#{$font-name}: #{$font-value};
+  }
+}

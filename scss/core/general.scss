@@ -1,0 +1,66 @@
+@use "../utilities/" as util;
+
+:where(html) {
+  scrollbar-color: var(--primary-300) var(--base-100);
+  accent-color: var(--primary-300);
+  caret-color: var(--primary-300);
+}
+
+::selection {
+  background-color: var(--primary-300);
+  color: var(--base-950);
+}
+
+::-webkit-scrollbar {
+  width: min(1vw, 0.5rem);
+
+  @include util.mq(lg) {
+    width: min(0.5vw, 0.5rem);
+  }
+}
+
+::-webkit-scrollbar-track {
+  background: var(--base-100);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-300);
+}
+
+:focus-visible {
+  outline-color: var(--color-primary-300);
+}
+
+body {
+  background: var(--base-50);
+  color: var(--base-950);
+  font-family: var(--ft-sans);
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+:where(h1, h2, h3, h4, h5, h6) {
+  font-family: var(--ft-title);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+h1 {
+  font-size: var(--fs-900);
+}
+
+h2 {
+  font-size: var(--fs-800);
+}
+
+h3 {
+  font-size: var(--fs-700);
+}

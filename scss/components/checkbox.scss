@@ -1,0 +1,122 @@
+.checkbox {
+  --ckb-bg-rgb: var(--base-900-rgb);
+  --ckb-fg-rgb: var(--base-100-rgb);
+
+  flex-shrink: 0;
+  height: 1.5rem;
+  width: 1.5rem;
+  cursor: pointer;
+  appearance: none;
+  border-radius: 0.5rem;
+  padding: 0;
+  border: 1px solid rgba(var(--ckb-bg-rgb), 0.7);
+  transition: 0.2s ease;
+
+  &:not(.no-anim) {
+    &:checked,
+    &[checked="true"],
+    &[aria-checked="true"] {
+      animation: checkmark 0.2s ease-out;
+    }
+
+    &:indeterminate {
+      animation: checkmark 0.2s ease-out;
+    }
+  }
+
+  &:not(.no-anim, :disabled) {
+    &:hover {
+      border-color: rgba(var(--ckb-bg-rgb), 1);
+    }
+  }
+
+  &:checked,
+  &[checked="true"],
+  &[aria-checked="true"] {
+    background: rgb(var(--ckb-bg-rgb)) no-repeat;
+    background-image: linear-gradient(
+        -45deg,
+        transparent 65%,
+        rgba(var(--ckb-bg-rgb)) 65.99%
+      ),
+      linear-gradient(45deg, transparent 75%, rgba(var(--ckb-bg-rgb)) 75.99%),
+      linear-gradient(-45deg, rgba(var(--ckb-bg-rgb)) 40%, transparent 40.99%),
+      linear-gradient(
+        45deg,
+        rgba(var(--ckb-bg-rgb)) 30%,
+        rgba(var(--ckb-fg-rgb)) 30.99%,
+        rgba(var(--ckb-fg-rgb)) 40%,
+        transparent 40.99%
+      ),
+      linear-gradient(
+        -45deg,
+        rgba(var(--ckb-fg-rgb)) 50%,
+        rgba(var(--ckb-bg-rgb)) 50.99%
+      );
+    border: 1px solid rgba(var(--ckb-bg-rgb), 1);
+  }
+
+  &:indeterminate {
+    background: rgb(var(--ckb-bg-rgb)) no-repeat;
+    background-image: linear-gradient(
+        90deg,
+        transparent 80%,
+        rgba(var(--ckb-bg-rgb)) 80%
+      ),
+      linear-gradient(-90deg, transparent 80%, rgba(var(--ckb-bg-rgb)) 80%),
+      linear-gradient(
+        0deg,
+        rgba(var(--ckb-bg-rgb)) 43%,
+        rgba(var(--ckb-fg-rgb)) 43%,
+        rgba(var(--ckb-fg-rgb)) 57%,
+        rgba(var(--ckb-bg-rgb)) 57%
+      );
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.3;
+  }
+
+  &:focus-visible {
+    outline: 2px solid rgb(var(--ckb-bg-rgb));
+    outline-offset: 2px;
+  }
+
+  &.primary {
+    --ckb-bg-rgb: var(--primary-400-rgb);
+    --ckb-fg-rgb: var(--primary-900-rgb);
+  }
+
+  &.secondary {
+    --ckb-bg-rgb: var(--secondary-400-rgb);
+    --ckb-fg-rgb: var(--secondary-900-rgb);
+  }
+
+  &.success {
+    --ckb-bg-rgb: var(--success-400-rgb);
+    --ckb-fg-rgb: var(--success-900-rgb);
+  }
+
+  &.danger {
+    --ckb-bg-rgb: var(--danger-400-rgb);
+    --ckb-fg-rgb: var(--danger-900-rgb);
+  }
+
+  &.info {
+    --ckb-bg-rgb: var(--info-400-rgb);
+    --ckb-fg-rgb: var(--info-900-rgb);
+  }
+}
+
+@keyframes checkmark {
+  0% {
+    background-position-y: 10px;
+  }
+  50% {
+    background-position-y: -2px;
+  }
+  100% {
+    background-position-y: 0;
+  }
+}
