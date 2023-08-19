@@ -37,6 +37,11 @@ progress,
     --prg-bg: var(--primary-200-rgb);
   }
 
+  &.secondary {
+    --prg-clr: var(--secondary-500-rgb);
+    --prg-bg: var(--secondary-200-rgb);
+  }
+
   &.success {
     --prg-clr: var(--success-500-rgb);
     --prg-bg: var(--success-200-rgb);

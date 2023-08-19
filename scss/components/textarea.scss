@@ -35,6 +35,10 @@ textarea,
     --txtr-clr: var(--primary-500-rgb);
   }
 
+  &.secondary {
+    --txtr-clr: var(--secondary-500-rgb);
+  }
+
   &.success {
     --txtr-clr: var(--success-500-rgb);
   }

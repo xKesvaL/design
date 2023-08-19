@@ -62,6 +62,11 @@ button,
     --btn-border: var(--primary-400-rgb);
   }
 
+  &.secondary {
+    --btn-bg: var(--secondary-400-rgb);
+    --btn-border: var(--secondary-400-rgb);
+  }
+
   &.success {
     --btn-bg: var(--success-400-rgb);
     --btn-border: var(--success-400-rgb);

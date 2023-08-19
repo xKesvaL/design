@@ -20,6 +20,10 @@ hr,
     --sep-clr: var(--primary-500-rgb);
   }
 
+  &.secondary {
+    --sep-clr: var(--secondary-500-rgb);
+  }
+
   &.success {
     --sep-clr: var(--success-500-rgb);
   }

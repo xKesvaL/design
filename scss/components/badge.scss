@@ -25,6 +25,10 @@
     --bdg-bg: var(--primary-400-rgb);
   }
 
+  &.secondary {
+    --bdg-bg: var(--secondary-400-rgb);
+  }
+
   &.info {
     --bdg-bg: var(--info-400-rgb);
   }

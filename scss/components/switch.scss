@@ -75,6 +75,10 @@
     --sw-fg: var(--primary-500);
   }
 
+  &.secondary {
+    --sw-fg: var(--secondary-500);
+  }
+
   &.success {
     --sw-fg: var(--success-500);
   }

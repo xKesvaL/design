@@ -45,6 +45,10 @@ select,
     --slct-clr: var(--primary-500-rgb);
   }
 
+  &.secondary {
+    --slct-clr: var(--secondary-500-rgb);
+  }
+
   &.success {
     --slct-clr: var(--success-500-rgb);
   }

@@ -88,6 +88,11 @@
     --ckb-fg-rgb: var(--primary-900-rgb);
   }
 
+  &.secondary {
+    --ckb-bg-rgb: var(--secondary-400-rgb);
+    --ckb-fg-rgb: var(--secondary-900-rgb);
+  }
+
   &.success {
     --ckb-bg-rgb: var(--success-400-rgb);
     --ckb-fg-rgb: var(--success-900-rgb);

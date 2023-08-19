@@ -19,6 +19,7 @@
         <div class="flex">
           <span class="badge">Default badge</span>
           <span class="badge primary">Primary badge</span>
+          <span class="badge secondary">Secondary badge</span>
           <span class="badge success">Success badge</span>
           <span class="badge info">Info badge</span>
           <span class="badge danger">Danger badge</span>
@@ -29,18 +30,21 @@
         <div class="flex">
           <button>Default btn</button>
           <button class="primary">Primary btn</button>
+          <button class="secondary">Secondary btn</button>
           <button class="success">Success btn</button>
           <button class="info">Info btn</button>
           <button class="danger">Danger btn</button>
 
           <button class="outline">Default outline btn</button>
           <button class="primary outline">Primary outline btn</button>
+          <button class="secondary outline">Secondary btn</button>
           <button class="success outline">Success outline btn</button>
           <button class="info outline">Info outline btn</button>
           <button class="danger outline">Danger outline btn</button>
 
           <button disabled>Default btn</button>
           <button class="primary" disabled>Primary btn</button>
+          <button class="secondary" disabled>Secondary btn</button>
           <button class="success" disabled>Success btn</button>
           <button class="info" disabled>Info btn</button>
           <button class="danger" disabled>Danger btn</button>
@@ -81,12 +85,14 @@
         <div class="flex">
           <input type="checkbox" class="checkbox" />
           <input type="checkbox" class="checkbox primary" />
+          <input type="checkbox" class="checkbox secondary" />
           <input type="checkbox" class="checkbox success" />
           <input type="checkbox" class="checkbox info" />
           <input type="checkbox" class="checkbox danger" />
 
           <input type="checkbox" disabled class="checkbox" />
           <input type="checkbox" disabled class="checkbox primary" />
+          <input type="checkbox" disabled class="checkbox secondary" />
           <input type="checkbox" disabled class="checkbox success" />
           <input type="checkbox" disabled class="checkbox info" />
           <input type="checkbox" disabled class="checkbox danger" />
@@ -115,6 +121,7 @@
         <div class="flex" style="flex-wrap: nowrap">
           <input type="text" placeholder="Some input" />
           <input type="text" placeholder="Some input" class="primary" />
+          <input type="text" placeholder="Some input" class="secondary" />
           <input type="text" placeholder="Some input" class="success" />
           <input type="text" placeholder="Some input" class="info" />
           <input type="text" placeholder="Some input" class="danger" />
@@ -125,6 +132,12 @@
             placeholder="Some input"
             disabled
             class="primary"
+          />
+          <input
+            type="text"
+            placeholder="Some input"
+            disabled
+            class="secondary"
           />
           <input
             type="text"
@@ -141,6 +154,7 @@
         <div class="flex" style="flex-wrap: nowrap">
           <input type="file" placeholder="Some input" />
           <input type="file" placeholder="Some input" class="primary" />
+          <input type="file" placeholder="Some input" class="secondary" />
           <input type="file" placeholder="Some input" class="success" />
           <input type="file" placeholder="Some input" class="info" />
           <input type="file" placeholder="Some input" class="danger" />
@@ -158,6 +172,12 @@
             type="file"
             placeholder="Some input"
             disabled
+            class="secondary"
+          />
+          <input
+            type="file"
+            placeholder="Some input"
+            disabled
             class="success"
           />
           <input type="file" placeholder="Some input" disabled class="info" />
@@ -169,6 +189,7 @@
         <div class="flex">
           <progress value="0" max="100"></progress>
           <progress value="25" max="100" class="primary"></progress>
+          <progress value="25" max="100" class="secondary"></progress>
           <progress value="50" max="100" class="success"></progress>
           <progress value="75" max="100" class="info"></progress>
           <progress value="100" max="100" class="danger"></progress>
@@ -179,12 +200,14 @@
         <div class="flex">
           <input type="radio" name="radio" />
           <input type="radio" name="radio" class="primary" />
+          <input type="radio" name="radio" class="secondary" />
           <input type="radio" name="radio" class="success" />
           <input type="radio" name="radio" class="info" />
           <input type="radio" name="radio" class="danger" />
 
           <input type="radio" name="radio" disabled />
           <input type="radio" name="radio" disabled class="primary" />
+          <input type="radio" name="radio" disabled class="secondary" />
           <input type="radio" name="radio" disabled class="success" />
           <input type="radio" name="radio" disabled class="info" />
           <input type="radio" name="radio" disabled class="danger" />
@@ -200,6 +223,12 @@
             <option>Angular 🤨</option>
           </select>
           <select class="primary">
+            <option>Select</option>
+            <option>Svelte 🥰</option>
+            <option>React 🤢</option>
+            <option>Angular 🤨</option>
+          </select>
+          <select class="secondary">
             <option>Select</option>
             <option>Svelte 🥰</option>
             <option>React 🤢</option>
@@ -238,6 +267,12 @@
             <option>React 🤢</option>
             <option>Angular 🤨</option>
           </select>
+          <select disabled class="secondary">
+            <option>Select</option>
+            <option>Svelte 🥰</option>
+            <option>React 🤢</option>
+            <option>Angular 🤨</option>
+          </select>
           <select disabled class="success">
             <option>Select</option>
             <option>Svelte 🥰</option>
@@ -260,17 +295,19 @@
       </section>
       <section class="container">
         <h2>Separators</h2>
-        <div class="flex" style="height: 220px">
+        <div class="flex" style="height: 250px">
           <div class="flex" style="flex: 1">
             <hr />
             <hr class="primary" />
+            <hr class="secondary" />
             <hr class="success" />
             <hr class="info" />
             <hr class="danger" />
           </div>
-          <div class="flex" style="height: 220px">
+          <div class="flex" style="height: 250px">
             <hr data-orientation="vertical" />
             <hr data-orientation="vertical" class="primary" />
+            <hr data-orientation="vertical" class="secondary" />
             <hr data-orientation="vertical" class="success" />
             <hr data-orientation="vertical" class="info" />
             <hr data-orientation="vertical" class="danger" />
@@ -282,12 +319,14 @@
         <div class="flex">
           <input type="checkbox" class="switch" />
           <input type="checkbox" class="switch primary" />
+          <input type="checkbox" class="switch secondary" />
           <input type="checkbox" class="switch success" />
           <input type="checkbox" class="switch info" />
           <input type="checkbox" class="switch danger" />
 
           <input type="checkbox" disabled class="switch" />
           <input type="checkbox" disabled class="switch primary" />
+          <input type="checkbox" disabled class="switch secondary" />
           <input type="checkbox" disabled class="switch success" />
           <input type="checkbox" disabled class="switch info" />
           <input type="checkbox" disabled class="switch danger" />
@@ -617,6 +656,7 @@
         <div class="flex" style="flex-wrap: nowrap">
           <textarea placeholder="Some input"></textarea>
           <textarea placeholder="Some input" class="primary"></textarea>
+          <textarea placeholder="Some input" class="secondary"></textarea>
           <textarea placeholder="Some input" class="success"></textarea>
           <textarea placeholder="Some input" class="info"></textarea>
           <textarea placeholder="Some input" class="danger"></textarea>
@@ -626,6 +666,11 @@
             placeholder="Some input"
             disabled
             class="primary"
+          ></textarea>
+          <textarea
+            placeholder="Some input"
+            disabled
+            class="secondary"
           ></textarea>
           <textarea
             placeholder="Some input"

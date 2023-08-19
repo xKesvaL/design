@@ -21,6 +21,10 @@ input,
     --ipt-clr: var(--primary-500-rgb);
   }
 
+  &.secondary {
+    --ipt-clr: var(--secondary-500-rgb);
+  }
+
   &.success {
     --ipt-clr: var(--success-500-rgb);
   }

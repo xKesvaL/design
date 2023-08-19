@@ -47,6 +47,10 @@ input[type="radio"],
     --rd-clr: var(--primary-500-rgb);
   }
 
+  &.secondary {
+    --rd-clr: var(--secondary-500-rgb);
+  }
+
   &.success {
     --rd-clr: var(--success-500-rgb);
   }
