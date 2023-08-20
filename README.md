@@ -101,9 +101,9 @@ I want to keep the package lightweight and only include things that I use in eve
 
 ## Fonts
 
-Font names are defined in `core/fonts.scss`, but they are not imported. I leave it up to you to import the fonts you need in your project and define the font-faces with the correct font-family name. This is so you choose where you want to import your fonts from (Google Fonts, Self hosted, etc.).
+Font names are defined in `utilities/typography.scss`, but they are not imported. I leave it up to you to import the fonts you need in your project and define the font-faces with the correct font-family name. This is so you choose where you want to import your fonts from (Google Fonts, Self hosted, etc.).
 
-Default fonts are `Rubik` for titles or important things and `Montserrat` for everything else. In this package, I only use 700 for `Rubik` and 400, 500 and 700 for `Montserrat`.
+Default fonts are `Benzin` for titles or important things and default ui font for everything else. In this package, I only use 700 for `Benzin` and 400, 500 and 700 for the default ui font.
 
 ## Animations
 
