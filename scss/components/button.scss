@@ -60,6 +60,7 @@ button,
   &.primary {
     --btn-bg: var(--primary-400-rgb);
     --btn-border: var(--primary-400-rgb);
+    color: white;
   }
 
   &.secondary {
