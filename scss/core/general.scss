@@ -1,14 +1,14 @@
 @use "../utilities/" as util;
 
 :where(html) {
-  scrollbar-color: var(--primary-300) var(--base-100);
-  accent-color: var(--primary-300);
-  caret-color: var(--primary-300);
+  scrollbar-color: rgb(var(--primary-300)) rgb(var(--base-100));
+  accent-color: rgb(var(--primary-300));
+  caret-color: rgb(var(--primary-300));
 }
 
 ::selection {
-  background-color: var(--primary-300);
-  color: var(--base-950);
+  background-color: rgb(var(--primary-300));
+  color: rgb(var(--base-950));
 }
 
 ::-webkit-scrollbar {
@@ -20,20 +20,16 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--base-100);
+  background: rgb(var(--base-100));
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--primary-300);
-}
-
-:focus-visible {
-  outline-color: var(--color-primary-300);
+  background: rgb(var(--primary-500));
 }
 
 body {
-  background: var(--base-50);
-  color: var(--base-950);
+  background: rgb(var(--base-50));
+  color: rgb(var(--base-950));
   font-family: var(--ft-sans);
 }
 

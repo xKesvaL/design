@@ -22,8 +22,7 @@
 }
 
 @mixin define-color($title, $color) {
-  --#{$title}: #{$color};
-  --#{$title}-rgb: #{red($color)}, #{green($color)}, #{blue($color)};
+  --#{$title}: #{red($color)}, #{green($color)}, #{blue($color)};
 }
 
 @mixin light-theme {
