@@ -1,13 +1,16 @@
 @use "../utilities/" as util;
 
 :root {
-  @include util.dark-theme;
+  @include util.light-theme;
 
-  color-scheme: dark;
+  &[data-theme="dark"] {
+    @include util.dark-theme;
+  }
 
-  &[data-theme="light"] {
-    @include util.light-theme;
-    color-scheme: light;
+  &[data-theme="auto"] {
+    @media (prefers-color-scheme: dark) {
+      @include util.dark-theme;
+    }
   }
 
   @each $screen-size, $size-map in util.$font-sizes {
