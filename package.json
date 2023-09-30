@@ -1,6 +1,6 @@
 {
   "name": "@kesval/design",
-  "version": "4.0.0",
+  "version": "4.1.0",
   "description": "A opiniated design system used all across KesvaL's projects.",
   "main": "scss/main.scss",
   "sass": "scss/main.scss",
