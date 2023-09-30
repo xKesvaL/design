@@ -22,7 +22,7 @@
 }
 
 @mixin define-color($title, $color) {
-  --#{$title}: #{hue($color)}, #{saturation($color)}, #{lightness($color)};
+  --#{$title}: #{hue($color)} #{saturation($color)} #{lightness($color)};
 }
 
 @mixin light-theme {
